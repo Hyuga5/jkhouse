@@ -1,0 +1,6 @@
+# Dependencies
+node_modules/
+
+# Build output can be regenerated
+# Uncomment if you want to ignore the built analytics file
+# public/analytics.js
