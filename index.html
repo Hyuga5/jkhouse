@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -314,6 +314,11 @@
         justify-content: center;
         position: relative;
       }
+
+      .pro-list {
+        text-decoration: none;
+      }
+
       .hero-right-label {
         font-size: 11px;
         font-weight: 700;
@@ -1212,7 +1217,7 @@
       <div class="nav-r">
         <ul class="nav-links" id="navlinks">
           <li><a href="#home">Home</a></li>
-          <li><a href="#products">Products</a></li>
+          <li><a href="/product.html">Products</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -1236,7 +1241,7 @@
             Sapredhunga, Dhobikhola Corridor.
           </p>
           <div class="hero-btns">
-            <a href="#products" class="btn-white">View Products</a>
+            <a href="/product.html" class="btn-white">View Products</a>
             <a href="#contact" class="btn-ghost">Contact Us</a>
           </div>
         </div>
@@ -1257,56 +1262,58 @@
       </div>
       <div class="hero-right">
         <div class="hero-right-label">Our Products</div>
-        <div class="pipe-list">
-          <div class="pipe-row">
-            <span class="pipe-num">01</span
-            ><span class="pipe-name">CPVC Pipes</span
-            ><span class="pipe-tag">Heat Resistant</span
-            ><span class="pipe-arrow">→</span>
+        <a href="product.html" class="pro-list">
+          <div class="pipe-list">
+            <div class="pipe-row">
+              <span class="pipe-num">01</span
+              ><span class="pipe-name">CPVC Pipes</span
+              ><span class="pipe-tag">Heat Resistant</span
+              ><span class="pipe-arrow">→</span>
+            </div>
+            <div class="pipe-row">
+              <span class="pipe-num">02</span
+              ><span class="pipe-name">UPVC Pipes</span
+              ><span class="pipe-tag">Drainage</span
+              ><span class="pipe-arrow">→</span>
+            </div>
+            <div class="pipe-row">
+              <span class="pipe-num">03</span
+              ><span class="pipe-name">PPR Pipes</span
+              ><span class="pipe-tag">Hot &amp; Cold</span
+              ><span class="pipe-arrow">→</span>
+            </div>
+            <div class="pipe-row">
+              <span class="pipe-num">04</span
+              ><span class="pipe-name">HDPE Pipes</span
+              ><span class="pipe-tag">Industrial</span
+              ><span class="pipe-arrow">→</span>
+            </div>
+            <div class="pipe-row">
+              <span class="pipe-num">05</span
+              ><span class="pipe-name">TP Zebra Pipes</span
+              ><span class="pipe-tag">Transparent</span
+              ><span class="pipe-arrow">→</span>
+            </div>
+            <div class="pipe-row">
+              <span class="pipe-num">06</span
+              ><span class="pipe-name">Borewell Pipes</span
+              ><span class="pipe-tag">Deep Water</span
+              ><span class="pipe-arrow">→</span>
+            </div>
+            <div class="pipe-row">
+              <span class="pipe-num">07</span
+              ><span class="pipe-name">Tripal Sheets</span
+              ><span class="pipe-tag">Weather</span
+              ><span class="pipe-arrow">→</span>
+            </div>
+            <div class="pipe-row">
+              <span class="pipe-num">08</span
+              ><span class="pipe-name">Water Tanks</span
+              ><span class="pipe-tag">Storage</span
+              ><span class="pipe-arrow">→</span>
+            </div>
           </div>
-          <div class="pipe-row">
-            <span class="pipe-num">02</span
-            ><span class="pipe-name">UPVC Pipes</span
-            ><span class="pipe-tag">Drainage</span
-            ><span class="pipe-arrow">→</span>
-          </div>
-          <div class="pipe-row">
-            <span class="pipe-num">03</span
-            ><span class="pipe-name">PPR Pipes</span
-            ><span class="pipe-tag">Hot &amp; Cold</span
-            ><span class="pipe-arrow">→</span>
-          </div>
-          <div class="pipe-row">
-            <span class="pipe-num">04</span
-            ><span class="pipe-name">HDPE Pipes</span
-            ><span class="pipe-tag">Industrial</span
-            ><span class="pipe-arrow">→</span>
-          </div>
-          <div class="pipe-row">
-            <span class="pipe-num">05</span
-            ><span class="pipe-name">TP Zebra Pipes</span
-            ><span class="pipe-tag">Transparent</span
-            ><span class="pipe-arrow">→</span>
-          </div>
-          <div class="pipe-row">
-            <span class="pipe-num">06</span
-            ><span class="pipe-name">Borewell Pipes</span
-            ><span class="pipe-tag">Deep Water</span
-            ><span class="pipe-arrow">→</span>
-          </div>
-          <div class="pipe-row">
-            <span class="pipe-num">07</span
-            ><span class="pipe-name">Tripal Sheets</span
-            ><span class="pipe-tag">Weather</span
-            ><span class="pipe-arrow">→</span>
-          </div>
-          <div class="pipe-row">
-            <span class="pipe-num">08</span
-            ><span class="pipe-name">Water Tanks</span
-            ><span class="pipe-tag">Storage</span
-            ><span class="pipe-arrow">→</span>
-          </div>
-        </div>
+        </a>
       </div>
     </section>
 
@@ -1387,139 +1394,149 @@
         </div>
         <a href="#contact" class="see-all">Request Catalogue →</a>
       </div>
-      <table class="products-table">
-        <tr>
-          <td class="prod-td-num">01</td>
-          <td class="prod-td-icon">
-            <div class="prod-icon-circ">
-              <img src="cpvc.jpg" class="prod-icon-img" alt="" />
-            </div>
-          </td>
-          <td class="prod-td-name">CPVC Pipes</td>
-          <td class="prod-td-desc">
-            Durable, heat-resistant pipes for water supply and industrial use.
-          </td>
-          <td class="prod-td-badge">
-            <span class="prod-badge">Heat Resistant</span>
-          </td>
-          <td class="prod-td-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="prod-td-num">02</td>
-          <td class="prod-td-icon">
-            <div class="prod-icon-circ">
-              <img src="pvc.jpg" class="prod-icon-img" alt="" />
-            </div>
-          </td>
-          <td class="prod-td-name">UPVC Pipes</td>
-          <td class="prod-td-desc">
-            High-quality pipes for plumbing and drainage. Lightweight,
-            corrosion-free.
-          </td>
-          <td class="prod-td-badge">
-            <span class="prod-badge">Drainage</span>
-          </td>
-          <td class="prod-td-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="prod-td-num">03</td>
-          <td class="prod-td-icon">
-            <div class="prod-icon-circ">
-              <img src="ppr.jpg" class="prod-icon-img" alt="" />
-            </div>
-          </td>
-          <td class="prod-td-name">PPR Pipes</td>
-          <td class="prod-td-desc">
-            Polypropylene pipes for hot and cold water supply.
-            Chemical-resistant.
-          </td>
-          <td class="prod-td-badge">
-            <span class="prod-badge">Hot &amp; Cold</span>
-          </td>
-          <td class="prod-td-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="prod-td-num">04</td>
-          <td class="prod-td-icon">
-            <div class="prod-icon-circ">
-              <img src="hdpe.jpg" class="prod-icon-img" alt="" />
-            </div>
-          </td>
-          <td class="prod-td-name">HDPE Pipes</td>
-          <td class="prod-td-desc">
-            Strong and flexible for industrial and municipal use. Excellent
-            pressure rating.
-          </td>
-          <td class="prod-td-badge">
-            <span class="prod-badge">Industrial</span>
-          </td>
-          <td class="prod-td-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="prod-td-num">05</td>
-          <td class="prod-td-icon">
-            <div class="prod-icon-circ">
-              <img src="tpzebra.jpg" class="prod-icon-img" alt="" />
-            </div>
-          </td>
-          <td class="prod-td-name">TP Zebra Pipes</td>
-          <td class="prod-td-desc">
-            Transparent Zebra pipes for strong, leak-free water systems with
-            visibility.
-          </td>
-          <td class="prod-td-badge">
-            <span class="prod-badge">Transparent</span>
-          </td>
-          <td class="prod-td-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="prod-td-num">06</td>
-          <td class="prod-td-icon">
-            <div class="prod-icon-circ">
-              <img src="borewell.jpg" class="prod-icon-img" alt="" />
-            </div>
-          </td>
-          <td class="prod-td-name">Borewell Pipes</td>
-          <td class="prod-td-desc">
-            High-quality pipes for efficient deep water supply. Built for
-            underground pressure.
-          </td>
-          <td class="prod-td-badge">
-            <span class="prod-badge">Deep Water</span>
-          </td>
-          <td class="prod-td-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="prod-td-num">07</td>
-          <td class="prod-td-icon">
-            <div class="prod-icon-circ">
-              <img src="waterproof-tarpaulin-sheet-500x500-Photoroom.png" class="prod-icon-img" alt="" />
-            </div>
-          </td>
-          <td class="prod-td-name">Tripal Sheets</td>
-          <td class="prod-td-desc">
-            Heavy-duty sheets for reliable, long-lasting weather protection on
-            site.
-          </td>
-          <td class="prod-td-badge"><span class="prod-badge">Weather</span></td>
-          <td class="prod-td-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="prod-td-num">08</td>
-          <td class="prod-td-icon">
-            <div class="prod-icon-circ">
-              <img src="tank.jpg" class="prod-icon-img" alt="" />
-            </div>
-          </td>
-          <td class="prod-td-name">Water Tanks</td>
-          <td class="prod-td-desc">
-            Strong tanks for safe, hygienic, long-term water storage.
-            UV-resistant.
-          </td>
-          <td class="prod-td-badge"><span class="prod-badge">Storage</span></td>
-          <td class="prod-td-arrow">→</td>
-        </tr>
-      </table>
+      <a href="product.html" class="pro-list">
+        <table class="products-table">
+          <tr>
+            <td class="prod-td-num">01</td>
+            <td class="prod-td-icon">
+              <div class="prod-icon-circ">
+                <img src="cpvc.jpg" class="prod-icon-img" alt="" />
+              </div>
+            </td>
+            <td class="prod-td-name">CPVC Pipes</td>
+            <td class="prod-td-desc">
+              Durable, heat-resistant pipes for water supply and industrial use.
+            </td>
+            <td class="prod-td-badge">
+              <span class="prod-badge">Heat Resistant</span>
+            </td>
+            <td class="prod-td-arrow">→</td>
+          </tr>
+          <tr>
+            <td class="prod-td-num">02</td>
+            <td class="prod-td-icon">
+              <div class="prod-icon-circ">
+                <img src="pvc.jpg" class="prod-icon-img" alt="" />
+              </div>
+            </td>
+            <td class="prod-td-name">UPVC Pipes</td>
+            <td class="prod-td-desc">
+              High-quality pipes for plumbing and drainage. Lightweight,
+              corrosion-free.
+            </td>
+            <td class="prod-td-badge">
+              <span class="prod-badge">Drainage</span>
+            </td>
+            <td class="prod-td-arrow">→</td>
+          </tr>
+          <tr>
+            <td class="prod-td-num">03</td>
+            <td class="prod-td-icon">
+              <div class="prod-icon-circ">
+                <img src="ppr.jpg" class="prod-icon-img" alt="" />
+              </div>
+            </td>
+            <td class="prod-td-name">PPR Pipes</td>
+            <td class="prod-td-desc">
+              Polypropylene pipes for hot and cold water supply.
+              Chemical-resistant.
+            </td>
+            <td class="prod-td-badge">
+              <span class="prod-badge">Hot &amp; Cold</span>
+            </td>
+            <td class="prod-td-arrow">→</td>
+          </tr>
+          <tr>
+            <td class="prod-td-num">04</td>
+            <td class="prod-td-icon">
+              <div class="prod-icon-circ">
+                <img src="hdpe.jpg" class="prod-icon-img" alt="" />
+              </div>
+            </td>
+            <td class="prod-td-name">HDPE Pipes</td>
+            <td class="prod-td-desc">
+              Strong and flexible for industrial and municipal use. Excellent
+              pressure rating.
+            </td>
+            <td class="prod-td-badge">
+              <span class="prod-badge">Industrial</span>
+            </td>
+            <td class="prod-td-arrow">→</td>
+          </tr>
+          <tr>
+            <td class="prod-td-num">05</td>
+            <td class="prod-td-icon">
+              <div class="prod-icon-circ">
+                <img src="tpzebra.jpg" class="prod-icon-img" alt="" />
+              </div>
+            </td>
+            <td class="prod-td-name">TP Zebra Pipes</td>
+            <td class="prod-td-desc">
+              Transparent Zebra pipes for strong, leak-free water systems with
+              visibility.
+            </td>
+            <td class="prod-td-badge">
+              <span class="prod-badge">Transparent</span>
+            </td>
+            <td class="prod-td-arrow">→</td>
+          </tr>
+          <tr>
+            <td class="prod-td-num">06</td>
+            <td class="prod-td-icon">
+              <div class="prod-icon-circ">
+                <img src="borewell.jpg" class="prod-icon-img" alt="" />
+              </div>
+            </td>
+            <td class="prod-td-name">Borewell Pipes</td>
+            <td class="prod-td-desc">
+              High-quality pipes for efficient deep water supply. Built for
+              underground pressure.
+            </td>
+            <td class="prod-td-badge">
+              <span class="prod-badge">Deep Water</span>
+            </td>
+            <td class="prod-td-arrow">→</td>
+          </tr>
+          <tr>
+            <td class="prod-td-num">07</td>
+            <td class="prod-td-icon">
+              <div class="prod-icon-circ">
+                <img
+                  src="waterproof-tarpaulin-sheet-500x500-Photoroom.png"
+                  class="prod-icon-img"
+                  alt=""
+                />
+              </div>
+            </td>
+            <td class="prod-td-name">Tripal Sheets</td>
+            <td class="prod-td-desc">
+              Heavy-duty sheets for reliable, long-lasting weather protection on
+              site.
+            </td>
+            <td class="prod-td-badge">
+              <span class="prod-badge">Weather</span>
+            </td>
+            <td class="prod-td-arrow">→</td>
+          </tr>
+          <tr>
+            <td class="prod-td-num">08</td>
+            <td class="prod-td-icon">
+              <div class="prod-icon-circ">
+                <img src="tank.jpg" class="prod-icon-img" alt="" />
+              </div>
+            </td>
+            <td class="prod-td-name">Water Tanks</td>
+            <td class="prod-td-desc">
+              Strong tanks for safe, hygienic, long-term water storage.
+              UV-resistant.
+            </td>
+            <td class="prod-td-badge">
+              <span class="prod-badge">Storage</span>
+            </td>
+            <td class="prod-td-arrow">→</td>
+          </tr>
+        </table>
+      </a>
     </section>
 
     <section id="why">
