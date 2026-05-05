@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -813,6 +813,17 @@
         letter-spacing: 2px;
         padding: 10px 20px;
       }
+
+      /* 📱 Mobile fix */
+      @media (max-width: 768px) {
+        .about-tag {
+          top: 16px;
+          right: 16px;
+          font-size: 14px;
+          padding: 6px 12px;
+          letter-spacing: 1px;
+        }
+      }
       .about-cards {
         display: flex;
         flex-direction: column;
@@ -1198,6 +1209,10 @@
         }
         .products-table .prod-td-desc {
           display: none;
+        }
+        .about-left a[href="#contact"] {
+          font-size: 12px;
+          padding: 12px 20px;
         }
         .footer-col {
           padding: 36px 24px;
