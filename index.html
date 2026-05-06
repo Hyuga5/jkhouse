@@ -182,7 +182,7 @@
         background: var(--white);
       }
       .hero-left {
-        background: var(--green);
+        background: url("store.jpg") center/cover no-repeat;
         padding: 80px 64px;
         display: flex;
         flex-direction: column;
@@ -190,6 +190,20 @@
         position: relative;
         overflow: hidden;
       }
+
+      .hero-left::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+      }
+
+      .hero-left > * {
+        position: relative;
+        z-index: 1;
+      }
+
       .hero-left::before {
         content: "JK";
         position: absolute;
@@ -591,12 +605,29 @@
         grid-template-columns: 1fr 1fr;
       }
       .why-left {
-        background: var(--green);
+        background: url("product.jpg") center/cover no-repeat;
         padding: 80px 64px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        position: relative;
+        overflow: hidden;
       }
+
+      .why-left::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+      }
+
+      /* Keep content above overlay */
+      .why-left > * {
+        position: relative;
+        z-index: 1;
+      }
+
       .why-left .section-kicker {
         color: rgba(255, 255, 255, 0.5);
       }
