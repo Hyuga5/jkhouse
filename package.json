@@ -1,0 +1,27 @@
+{
+  "name": "primary",
+  "version": "1.0.0",
+  "description": "JK House & Suppliers - Pipes & Fittings Nepal website with Vercel Web Analytics",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild analytics-init.js --bundle --format=esm --outfile=public/analytics.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hyuga5/jkhouse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hyuga5/jkhouse/issues"
+  },
+  "homepage": "https://github.com/Hyuga5/jkhouse#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}
