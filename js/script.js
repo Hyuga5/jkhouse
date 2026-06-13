@@ -60,6 +60,7 @@ function cSubmit() {
   document.getElementById("fm").value = "";
   setTimeout(() => (s.style.display = "none"), 6000);
 }
+document.getElementById("csubmit").addEventListener("click", cSubmit);
 const obs = new IntersectionObserver(
   (entries) =>
     entries.forEach((e) => {
