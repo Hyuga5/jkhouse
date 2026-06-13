@@ -30,6 +30,19 @@ body {
 body {
   cursor: none;
 }
+
+/* Disable custom cursor on touch/mobile devices */
+@media (max-width: 960px), (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 #cur {
   position: fixed;
   width: 12px;
@@ -465,6 +478,17 @@ nav {
   background: var(--white);
   padding: 100px 48px;
 }
+
+/* Safer table layout on small screens */
+.products-table {
+  table-layout: fixed;
+}
+
+.products-table td {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
 .section-head {
   display: flex;
   align-items: flex-end;
