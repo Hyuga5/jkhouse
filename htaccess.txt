@@ -1,0 +1,28 @@
+# Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Pretty product URLs: /product and /product/<slug> -> product.html
+# (added so each catalogue item gets its own page, e.g. /product/cpvcpipe)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^product(/[^/]+)?/?$ /product.html [L]
+
+# Security headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header set Content-Security-Policy "default-src 'self'; img-src 'self' data: https:; script-src 'self' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; frame-src https://www.google.com"
+</IfModule>
+
+# Disable directory listing
+Options -Indexes
+
+# Protect .htaccess itself
+<Files ".htaccess">
+  Order allow,deny
+  Deny from all
+</Files>
