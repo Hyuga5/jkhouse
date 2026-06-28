@@ -1,0 +1,8 @@
+# ── Add this inside your Nginx server { } block ──
+# (Only needed if your hosting uses Nginx instead of Apache/.htaccess)
+# This makes /product/<anything> serve product.html on a direct hit,
+# the same way /product already does today.
+
+location ^~ /product {
+    try_files $uri $uri/ /product.html;
+}
