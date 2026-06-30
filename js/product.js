@@ -1268,20 +1268,20 @@ function renderGrid(list){
   return list.map(p=>{
     const price = p.variants[0] ? p.variants[0].price : null;
     return `
-    <div class="product-card" onclick="selectProduct(${p.id})">
+    <div class="product-card" data-action="select-product" data-id="${p.id}">
       <div class="product-img-wrap"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
       <div class="product-body">
         <div class="product-cat">${p.category}</div>
         <div class="product-name">${p.name}</div>
         <div class="product-desc">${p.description}</div>
-        <div class="size-row" onclick="event.stopPropagation()">
-          <select class="size-select" id="gsel-${p.id}" onchange="updateGridPrice(${p.id})">
+        <div class="size-row" data-action="noop">
+          <select class="size-select" id="gsel-${p.id}" data-role="grid-size" data-id="${p.id}">
             ${sizeOptionsHTML(p, 0)}
           </select>
         </div>
         <div class="product-footer">
           <span class="price-badge" id="gprice-${p.id}">${fmtPrice(price)}</span>
-          <button class="enquire-btn" onclick="event.stopPropagation(); enquireFromCard(${p.id})">Send Quote</button>
+          <button class="enquire-btn" data-action="enquire" data-id="${p.id}">Send Quote</button>
         </div>
       </div>
     </div>`;
@@ -1292,7 +1292,7 @@ function renderList(list){
   return list.map(p=>{
     const price = p.variants[0] ? p.variants[0].price : null;
     return `
-    <div class="product-list-card" onclick="selectProduct(${p.id})">
+    <div class="product-list-card" data-action="select-product" data-id="${p.id}">
       <div class="list-img-wrap"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
       <div class="list-body">
         <div class="list-info">
@@ -1300,12 +1300,12 @@ function renderList(list){
           <div class="list-name">${p.name}</div>
           <div class="list-desc">${p.description}</div>
         </div>
-        <div class="list-actions" onclick="event.stopPropagation()">
-          <select class="size-select" id="lsel-${p.id}" onchange="updateListPrice(${p.id})">
+        <div class="list-actions" data-action="noop">
+          <select class="size-select" id="lsel-${p.id}" data-role="list-size" data-id="${p.id}">
             ${sizeOptionsHTML(p, 0)}
           </select>
           <span class="price-badge" id="lprice-${p.id}">${fmtPrice(price)}</span>
-          <button class="enquire-btn" onclick="enquireFromCard(${p.id})">Send Quote</button>
+          <button class="enquire-btn" data-action="enquire" data-id="${p.id}">Send Quote</button>
         </div>
       </div>
     </div>`;
@@ -1467,7 +1467,7 @@ function renderRelated(p){
       <div class="related-title">You may also like</div>
       <div class="related-grid">
         ${sample.map(r=>`
-          <div class="related-card" onclick="selectProduct(${r.id})">
+          <div class="related-card" data-action="select-product" data-id="${r.id}">
             <div class="related-img-wrap"><img src="${r.img}" alt="${r.name}" loading="lazy"></div>
             <div class="related-body">
               <div class="related-cat">${r.category}</div>
@@ -1487,7 +1487,7 @@ function render(){
     const manyVariants = product.variants.length > 6;
     wrapper.innerHTML=`
       <div class="topbar">
-        <button class="back-btn" onclick="closeDetail()">
+        <button class="back-btn" data-action="close-detail">
           <svg style="width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
           Back to catalogue
         </button>
@@ -1509,12 +1509,12 @@ function render(){
           <div class="variant-section">
             <div class="variant-label">Choose size / variant</div>
             <div class="variant-picker">
-              <select id="detail-size-select" onchange="updateDetailPrice(${product.id})">
+              <select id="detail-size-select" data-role="detail-size" data-id="${product.id}">
                 ${sizeOptionsHTML(product, 0)}
               </select>
               <div class="variant-price" id="detail-price">${fmtPrice(product.variants[0]?.price)}</div>
             </div>
-            ${manyVariants ? `<span class="see-all-toggle" onclick="togglePriceTable()">See full price list ▾</span>
+            ${manyVariants ? `<span class="see-all-toggle" data-action="toggle-price-table">See full price list ▾</span>
             <table class="price-table" id="full-price-table" style="display:none">
               <thead><tr><th>Size / Variant</th><th>MRP (NPR)</th></tr></thead>
               <tbody>${priceTableRows(product.variants)}</tbody>
@@ -1530,7 +1530,7 @@ function render(){
               <strong>MRP inclusive of 13% VAT</strong>
               Get instant pricing quotes for hardware outlets or sites across Nepal.
             </div>
-            <button class="enquire-btn" style="padding:12px 24px;font-size:13px;border-radius:8px" onclick="openEnquiry(${product.id})">Send Quote</button>
+            <button class="enquire-btn" style="padding:12px 24px;font-size:13px;border-radius:8px" data-action="open-enquiry" data-id="${product.id}">Send Quote</button>
           </div>
         </div>
       </div>
@@ -1544,13 +1544,13 @@ function render(){
       <div class="topbar-title" id="page-title">All products</div>
       <div class="search-wrap">
         <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 15.803 7.5 7.5 0 0015.803 15.803z"/></svg>
-        <input type="text" id="search-input" value="${searchQ}" placeholder="Search products..." oninput="handleSearch()">
+        <input type="text" id="search-input" data-role="search-input" value="${searchQ}" placeholder="Search products...">
       </div>
       <div class="view-toggle">
-        <button class="vbtn ${currentView==='grid'?'active':''}" id="vbtn-grid" onclick="setView('grid')">
+        <button class="vbtn ${currentView==='grid'?'active':''}" id="vbtn-grid" data-action="set-view" data-view="grid">
           <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"/></svg>
         </button>
-        <button class="vbtn ${currentView==='list'?'active':''}" id="vbtn-list" onclick="setView('list')">
+        <button class="vbtn ${currentView==='list'?'active':''}" id="vbtn-list" data-action="set-view" data-view="list">
           <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
         </button>
       </div>
@@ -1575,10 +1575,10 @@ function render(){
     </div>
 
     <div class="filter-bar">
-      <button class="filter-chip ${currentCat==='All'?'active':''}" onclick="filterChip(this,'All')">All</button>
-      <button class="filter-chip ${currentCat==='CPVC'?'active':''}" onclick="filterChip(this,'CPVC')">CPVC</button>
-      <button class="filter-chip ${currentCat==='PPR'?'active':''}" onclick="filterChip(this,'PPR')">PPR</button>
-      <button class="filter-chip ${currentCat==='PVC'?'active':''}" onclick="filterChip(this,'PVC')">PVC / uPVC</button>
+      <button class="filter-chip ${currentCat==='All'?'active':''}" data-action="filter-chip" data-cat="All">All</button>
+      <button class="filter-chip ${currentCat==='CPVC'?'active':''}" data-action="filter-chip" data-cat="CPVC">CPVC</button>
+      <button class="filter-chip ${currentCat==='PPR'?'active':''}" data-action="filter-chip" data-cat="PPR">PPR</button>
+      <button class="filter-chip ${currentCat==='PVC'?'active':''}" data-action="filter-chip" data-cat="PVC">PVC / uPVC</button>
       <span class="result-count" id="result-count">0 products</span>
     </div>
 
@@ -1661,11 +1661,9 @@ function openEnquiry(id, variantIdx){
   document.getElementById('enquiryModal').classList.add('open');
   document.body.style.overflow='hidden';
 }
-function closeEnqModal(e){
-  if(e===true || (e&&e.target&&e.target.id==='enquiryModal')){
-    document.getElementById('enquiryModal').classList.remove('open');
-    document.body.style.overflow='';
-  }
+function closeEnqModal(){
+  document.getElementById('enquiryModal').classList.remove('open');
+  document.body.style.overflow='';
 }
 function submitEnquiry(){
   const name=document.getElementById('eqName').value.trim();
@@ -1677,8 +1675,97 @@ function submitEnquiry(){
   const subject=encodeURIComponent('Quote Request: '+product);
   const body=encodeURIComponent('Quote Request\n\nName: '+name+'\nPhone: '+phone+'\nEmail: '+email+'\n\nProduct: '+product+'\n\nMessage:\n'+msg+'\n\n---\nSent from ITPF Catalogue');
   window.location.href='mailto:itpf@intertech.com.np?subject='+subject+'&body='+body;
-  closeEnqModal(true);
+  closeEnqModal();
 }
+
+/* ============================================================
+   Event delegation
+   ------------------------------------------------------------
+   Every interactive element (cards, buttons, selects, the search
+   box, the modal) is marked with data-action / data-role instead
+   of inline onclick / onchange / oninput attributes. A strict
+   Content-Security-Policy (script-src without 'unsafe-inline')
+   blocks inline event-handler attributes entirely, which is why
+   none of those used to fire even though the page rendered fine.
+
+   These three listeners are attached once, here, to `document`,
+   so they keep working no matter how many times render() rebuilds
+   the markup underneath them — no per-element re-binding needed.
+   ============================================================ */
+
+document.addEventListener('click', function(e){
+  const el = e.target.closest('[data-action]');
+  if(!el) return;
+  const action = el.dataset.action;
+
+  switch(action){
+    case 'noop':
+      // Deliberate dead end: stops a click on a nested control
+      // (e.g. a <select> inside a clickable product card) from
+      // bubbling up to that card's own data-action.
+      return;
+
+    case 'go-home':
+      goHome(e);
+      break;
+
+    case 'filter-cat':
+      filterCat(el, el.dataset.cat);
+      break;
+
+    case 'filter-chip':
+      filterChip(el, el.dataset.cat);
+      break;
+
+    case 'set-view':
+      setView(el.dataset.view);
+      break;
+
+    case 'select-product':
+      selectProduct(+el.dataset.id);
+      break;
+
+    case 'enquire':
+      enquireFromCard(+el.dataset.id);
+      break;
+
+    case 'open-enquiry':
+      openEnquiry(+el.dataset.id);
+      break;
+
+    case 'close-detail':
+      closeDetail();
+      break;
+
+    case 'toggle-price-table':
+      togglePriceTable();
+      break;
+
+    case 'close-modal':
+      closeEnqModal();
+      break;
+
+    case 'submit-enquiry':
+      submitEnquiry();
+      break;
+  }
+});
+
+document.addEventListener('change', function(e){
+  const role = e.target.dataset && e.target.dataset.role;
+  if(!role) return;
+  const id = +e.target.dataset.id;
+
+  if(role === 'grid-size') updateGridPrice(id);
+  else if(role === 'list-size') updateListPrice(id);
+  else if(role === 'detail-size') updateDetailPrice(id);
+});
+
+document.addEventListener('input', function(e){
+  if(e.target && e.target.dataset && e.target.dataset.role === 'search-input'){
+    handleSearch();
+  }
+});
 
 applyRouteFromLocation();
 render();
