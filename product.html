@@ -14,13 +14,14 @@
     />
     <link rel="canonical" href="https://jkhouse.com.np/product" />
     <link rel="stylesheet" href="/css/product.css" />
+    <script src="/js/product.js" defer></script>
   </head>
   <body>
     <div class="page-shell">
       <aside class="sidebar">
         <a
           href="#"
-          onclick="goHome(event)"
+          data-action="go-home"
           style="text-decoration: none; color: inherit"
         >
           <div class="sidebar-logo">
@@ -33,7 +34,7 @@
           <button
             class="cat-btn active"
             data-cat="All"
-            onclick="filterCat(this, 'All')"
+            data-action="filter-cat"
           >
             <span class="cat-dot"></span>All products<span
               class="cat-count"
@@ -43,7 +44,7 @@
           <button
             class="cat-btn"
             data-cat="CPVC"
-            onclick="filterCat(this, 'CPVC')"
+            data-action="filter-cat"
           >
             <span class="cat-dot"></span>CPVC<span
               class="cat-count"
@@ -53,7 +54,7 @@
           <button
             class="cat-btn"
             data-cat="PPR"
-            onclick="filterCat(this, 'PPR')"
+            data-action="filter-cat"
           >
             <span class="cat-dot"></span>PPR<span
               class="cat-count"
@@ -63,7 +64,7 @@
           <button
             class="cat-btn"
             data-cat="PVC"
-            onclick="filterCat(this, 'PVC')"
+            data-action="filter-cat"
           >
             <span class="cat-dot"></span>PVC / uPVC<span
               class="cat-count"
@@ -98,10 +99,10 @@
     </div>
 
     <!-- Enquiry Modal -->
-    <div class="modal-overlay" id="enquiryModal" onclick="closeEnqModal(event)">
-      <div class="enq-modal" onclick="event.stopPropagation()">
+    <div class="modal-overlay" id="enquiryModal" data-action="close-modal">
+      <div class="enq-modal" data-action="noop">
         <div class="enq-header">
-          <button class="modal-close" onclick="closeEnqModal(true)">✕</button>
+          <button class="modal-close" data-action="close-modal">✕</button>
           <div class="enq-tag">Quote Request</div>
           <h3 id="eqTitle">Send Enquiry</h3>
         </div>
@@ -119,13 +120,11 @@
             id="eqMessage"
             placeholder="Describe your requirement, quantity needed, delivery location…"
           ></textarea>
-          <button class="enq-submit" onclick="submitEnquiry()">
+          <button class="enq-submit" data-action="submit-enquiry">
             Send via Email
           </button>
         </div>
       </div>
     </div>
-    <script src="/js/script.js" ></script>
-    <script src="/js/product.js" ></script>
   </body>
 </html>
