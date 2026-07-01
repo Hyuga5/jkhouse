@@ -3110,20 +3110,20 @@ function renderGrid(list) {
     .map((p) => {
       const price = p.variants[0] ? p.variants[0].price : null;
       return `
-    <div class="product-card" onclick="selectProduct(${p.id})">
+    <div class="product-card" data-action="selectProduct" data-id="${p.id}">
       <div class="product-img-wrap"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
       <div class="product-body">
         <div class="product-cat">${p.category}</div>
         <div class="product-name">${p.name}</div>
         <div class="product-desc">${p.description}</div>
-        <div class="size-row" onclick="event.stopPropagation()">
-          <select class="size-select" id="gsel-${p.id}" onchange="updateGridPrice(${p.id})">
+        <div class="size-row" data-action="stop">
+          <select class="size-select" id="gsel-${p.id}" data-action="updateGridPrice" data-id="${p.id}">
             ${sizeOptionsHTML(p, 0)}
           </select>
         </div>
         <div class="product-footer">
           <span class="price-badge" id="gprice-${p.id}">${fmtPrice(price)}</span>
-          <button class="enquire-btn" onclick="event.stopPropagation(); enquireFromCard(${p.id})">Send Quote</button>
+          <button class="enquire-btn" data-action="enquireFromCard" data-id="${p.id}">Send Quote</button>
         </div>
       </div>
     </div>`;
@@ -3136,7 +3136,7 @@ function renderList(list) {
     .map((p) => {
       const price = p.variants[0] ? p.variants[0].price : null;
       return `
-    <div class="product-list-card" onclick="selectProduct(${p.id})">
+    <div class="product-list-card" data-action="selectProduct" data-id="${p.id}">
       <div class="list-img-wrap"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
       <div class="list-body">
         <div class="list-info">
@@ -3144,12 +3144,12 @@ function renderList(list) {
           <div class="list-name">${p.name}</div>
           <div class="list-desc">${p.description}</div>
         </div>
-        <div class="list-actions" onclick="event.stopPropagation()">
-          <select class="size-select" id="lsel-${p.id}" onchange="updateListPrice(${p.id})">
+        <div class="list-actions" data-action="stop">
+          <select class="size-select" id="lsel-${p.id}" data-action="updateListPrice" data-id="${p.id}">
             ${sizeOptionsHTML(p, 0)}
           </select>
           <span class="price-badge" id="lprice-${p.id}">${fmtPrice(price)}</span>
-          <button class="enquire-btn" onclick="enquireFromCard(${p.id})">Send Quote</button>
+          <button class="enquire-btn" data-action="enquireFromCard" data-id="${p.id}">Send Quote</button>
         </div>
       </div>
     </div>`;
@@ -3205,7 +3205,7 @@ function renderSectioned(list, view) {
         <div class="${view === "grid" ? "products-grid" : "products-list"}">${inner}</div>
         ${
           items.length > limit
-            ? `<button class="section-viewall" onclick="filterChip(this,'${viewAllCat}')">View all ${sec.label} (${items.length}) →</button>`
+            ? `<button class="section-viewall" data-action="filterChip" data-cat="${viewAllCat}">View all ${sec.label} (${items.length}) →</button>`
             : ""
         }
       </div>`;
@@ -3414,7 +3414,7 @@ function renderRelated(p) {
         ${sample
           .map(
             (r) => `
-          <div class="related-card" onclick="selectProduct(${r.id})">
+          <div class="related-card" data-action="selectProduct" data-id="${r.id}">
             <div class="related-img-wrap"><img src="${r.img}" alt="${r.name}" loading="lazy"></div>
             <div class="related-body">
               <div class="related-cat">${r.category}</div>
@@ -3435,7 +3435,7 @@ function render() {
     const product = PRODUCTS.find((p) => p.id === selectedProductId);
     wrapper.innerHTML = `
       <div class="topbar">
-        <button class="back-btn" onclick="closeDetail()">
+        <button class="back-btn" data-action="closeDetail">
           <svg style="width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
           Back to catalogue
         </button>
@@ -3457,7 +3457,7 @@ function render() {
           <div class="variant-section">
             <div class="variant-label">Choose size / variant</div>
             <div class="variant-picker">
-              <select id="detail-size-select" onchange="updateDetailPrice(${product.id})">
+              <select id="detail-size-select" data-action="updateDetailPrice" data-id="${product.id}">
                 ${sizeOptionsHTML(product, 0)}
               </select>
               <div class="variant-price" id="detail-price">${fmtPrice(product.variants[0]?.price)}</div>
@@ -3469,7 +3469,7 @@ function render() {
               <strong>MRP inclusive of 13% VAT</strong>
               Get instant pricing quotes for hardware outlets or sites across Nepal.
             </div>
-            <button class="enquire-btn" style="padding:12px 24px;font-size:13px;border-radius:8px" onclick="openEnquiry(${product.id})">Send Quote</button>
+            <button class="enquire-btn" style="padding:12px 24px;font-size:13px;border-radius:8px" data-action="openEnquiry" data-id="${product.id}">Send Quote</button>
           </div>
         </div>
       </div>
@@ -3483,13 +3483,13 @@ function render() {
       <div class="topbar-title" id="page-title">All products</div>
       <div class="search-wrap">
         <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 15.803 7.5 7.5 0 0015.803 15.803z"/></svg>
-        <input type="text" id="search-input" value="${searchQ}" placeholder="Search products..." oninput="handleSearch()">
+        <input type="text" id="search-input" value="${searchQ}" placeholder="Search products..." data-action="handleSearch">
       </div>
       <div class="view-toggle">
-        <button class="vbtn ${currentView === "grid" ? "active" : ""}" id="vbtn-grid" onclick="setView('grid')">
+        <button class="vbtn ${currentView === "grid" ? "active" : ""}" id="vbtn-grid" data-action="setView" data-view="grid">
           <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"/></svg>
         </button>
-        <button class="vbtn ${currentView === "list" ? "active" : ""}" id="vbtn-list" onclick="setView('list')">
+        <button class="vbtn ${currentView === "list" ? "active" : ""}" id="vbtn-list" data-action="setView" data-view="list">
           <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
         </button>
       </div>
@@ -3517,23 +3517,23 @@ function render() {
       currentCat === "HDPE"
         ? `
     <div class="filter-bar">
-      <button class="filter-chip ${currentHdpeSub === "All" ? "active" : ""}" onclick="filterHdpeSub(this,'All')">All HDPE</button>
-      <button class="filter-chip ${currentHdpeSub === "NSHDPE" ? "active" : ""}" onclick="filterHdpeSub(this,'NSHDPE')">NS HDPE</button>
-      <button class="filter-chip ${currentHdpeSub === "NSQHDPE" ? "active" : ""}" onclick="filterHdpeSub(this,'NSQHDPE')">NSQ HDPE</button>
+      <button class="filter-chip ${currentHdpeSub === "All" ? "active" : ""}" data-action="filterHdpeSub" data-sub="All">All HDPE</button>
+      <button class="filter-chip ${currentHdpeSub === "NSHDPE" ? "active" : ""}" data-action="filterHdpeSub" data-sub="NSHDPE">NS HDPE</button>
+      <button class="filter-chip ${currentHdpeSub === "NSQHDPE" ? "active" : ""}" data-action="filterHdpeSub" data-sub="NSQHDPE">NSQ HDPE</button>
     </div>`
         : ""
     }
 
     <div class="filter-bar">
-      <button class="filter-chip ${currentCat === "All" ? "active" : ""}" onclick="filterChip(this,'All')">All</button>
-      <button class="filter-chip ${currentCat === "CPVC" ? "active" : ""}" onclick="filterChip(this,'CPVC')">CPVC</button>
-      <button class="filter-chip ${currentCat === "PPR" ? "active" : ""}" onclick="filterChip(this,'PPR')">PPR</button>
-      <button class="filter-chip ${currentCat === "PVC" ? "active" : ""}" onclick="filterChip(this,'PVC')">PVC / uPVC</button>
-      <button class="filter-chip ${currentCat === "BoringPipe" ? "active" : ""}" onclick="filterChip(this,'BoringPipe')">Boring Pipe</button>
-      <button class="filter-chip ${currentCat === "HDPE" ? "active" : ""}" onclick="filterChip(this,'HDPE')">HDPE</button>
-      <button class="filter-chip ${currentCat === "Tank" ? "active" : ""}" onclick="filterChip(this,'Tank')">Tanks</button>
-      <button class="filter-chip ${currentCat === "Garden" ? "active" : ""}" onclick="filterChip(this,'Garden')">Garden Pipes</button>
-      <button class="filter-chip ${currentCat === "OtherItems" ? "active" : ""}" onclick="filterChip(this,'OtherItems')">Other Products</button>
+      <button class="filter-chip ${currentCat === "All" ? "active" : ""}" data-action="filterChip" data-cat="All">All</button>
+      <button class="filter-chip ${currentCat === "CPVC" ? "active" : ""}" data-action="filterChip" data-cat="CPVC">CPVC</button>
+      <button class="filter-chip ${currentCat === "PPR" ? "active" : ""}" data-action="filterChip" data-cat="PPR">PPR</button>
+      <button class="filter-chip ${currentCat === "PVC" ? "active" : ""}" data-action="filterChip" data-cat="PVC">PVC / uPVC</button>
+      <button class="filter-chip ${currentCat === "BoringPipe" ? "active" : ""}" data-action="filterChip" data-cat="BoringPipe">Boring Pipe</button>
+      <button class="filter-chip ${currentCat === "HDPE" ? "active" : ""}" data-action="filterChip" data-cat="HDPE">HDPE</button>
+      <button class="filter-chip ${currentCat === "Tank" ? "active" : ""}" data-action="filterChip" data-cat="Tank">Tanks</button>
+      <button class="filter-chip ${currentCat === "Garden" ? "active" : ""}" data-action="filterChip" data-cat="Garden">Garden Pipes</button>
+      <button class="filter-chip ${currentCat === "OtherItems" ? "active" : ""}" data-action="filterChip" data-cat="OtherItems">Other Products</button>
       <span class="result-count" id="result-count">0 products</span>
     </div>
 
@@ -3712,4 +3712,87 @@ window.addEventListener("resize", () => {
   resizeTimer = setTimeout(() => {
     if (currentCat === "All" && !selectedProductId) render();
   }, 200);
+});
+
+/* ============================================================
+   CSP-safe event delegation
+   All markup (static in product.html and dynamically generated
+   in this file) uses data-action / data-id / data-cat / data-sub /
+   data-view attributes instead of inline onclick/onchange/oninput.
+   That's required because the site's Content-Security-Policy
+   (script-src 'self' ...) blocks inline event handler attributes.
+   These three listeners on document handle every interactive
+   element, including ones rendered after the page loads.
+   ============================================================ */
+document.addEventListener("click", function (e) {
+  const el = e.target.closest("[data-action]");
+  if (!el) return;
+  const action = el.dataset.action;
+  const id = el.dataset.id ? Number(el.dataset.id) : undefined;
+
+  switch (action) {
+    case "stop":
+      // Wrapper elements (size-row, list-actions, enq-modal box) that
+      // exist only to stop a click from bubbling to a parent card/overlay.
+      break;
+    case "goHome":
+      goHome(e);
+      break;
+    case "filterCat":
+      filterCat(el, el.dataset.cat);
+      break;
+    case "filterChip":
+      filterChip(el, el.dataset.cat);
+      break;
+    case "filterHdpeSub":
+      filterHdpeSub(el, el.dataset.sub);
+      break;
+    case "setView":
+      setView(el.dataset.view);
+      break;
+    case "selectProduct":
+      selectProduct(id);
+      break;
+    case "closeDetail":
+      closeDetail();
+      break;
+    case "enquireFromCard":
+      enquireFromCard(id);
+      break;
+    case "openEnquiry":
+      openEnquiry(id);
+      break;
+    case "submitEnquiry":
+      submitEnquiry();
+      break;
+    case "closeEnqModal":
+      closeEnqModal(e);
+      break;
+    case "closeEnqModalForced":
+      closeEnqModal(true);
+      break;
+  }
+});
+
+document.addEventListener("change", function (e) {
+  const el = e.target.closest("[data-action]");
+  if (!el) return;
+  const id = el.dataset.id ? Number(el.dataset.id) : undefined;
+  switch (el.dataset.action) {
+    case "updateGridPrice":
+      updateGridPrice(id);
+      break;
+    case "updateListPrice":
+      updateListPrice(id);
+      break;
+    case "updateDetailPrice":
+      updateDetailPrice(id);
+      break;
+  }
+});
+
+document.addEventListener("input", function (e) {
+  const el = e.target.closest("[data-action]");
+  if (!el) return;
+  if (el.dataset.action === "handleSearch") handleSearch();
 });
