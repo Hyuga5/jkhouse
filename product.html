@@ -20,7 +20,7 @@
       <aside class="sidebar">
         <a
           href="#"
-          onclick="goHome(event)"
+          data-action="goHome"
           style="text-decoration: none; color: inherit"
         >
           <div class="sidebar-logo">
@@ -33,7 +33,7 @@
           <button
             class="cat-btn active"
             data-cat="All"
-            onclick="filterCat(this, 'All')"
+            data-action="filterCat"
           >
             <span class="cat-dot"></span>All products<span
               class="cat-count"
@@ -43,7 +43,7 @@
           <button
             class="cat-btn"
             data-cat="CPVC"
-            onclick="filterCat(this, 'CPVC')"
+            data-action="filterCat"
           >
             <span class="cat-dot"></span>CPVC<span
               class="cat-count"
@@ -53,7 +53,7 @@
           <button
             class="cat-btn"
             data-cat="PPR"
-            onclick="filterCat(this, 'PPR')"
+            data-action="filterCat"
           >
             <span class="cat-dot"></span>PPR<span
               class="cat-count"
@@ -63,7 +63,7 @@
           <button
             class="cat-btn"
             data-cat="PVC"
-            onclick="filterCat(this, 'PVC')"
+            data-action="filterCat"
           >
             <span class="cat-dot"></span>PVC / uPVC<span
               class="cat-count"
@@ -73,7 +73,7 @@
           <button
             class="cat-btn"
             data-cat="BoringPipe"
-            onclick="filterCat(this, 'BoringPipe')"
+            data-action="filterCat"
           >
             <span class="cat-dot"></span>Boring Pipe<span
               class="cat-count"
@@ -83,7 +83,7 @@
           <button
             class="cat-btn"
             data-cat="HDPE"
-            onclick="filterCat(this, 'HDPE')"
+            data-action="filterCat"
           >
             <span class="cat-dot"></span>HDPE<span
               class="cat-count"
@@ -93,7 +93,7 @@
           <button
             class="cat-btn"
             data-cat="Tank"
-            onclick="filterCat(this, 'Tank')"
+            data-action="filterCat"
           >
             <span class="cat-dot"></span>Tanks<span
               class="cat-count"
@@ -103,7 +103,7 @@
           <button
             class="cat-btn"
             data-cat="Garden"
-            onclick="filterCat(this, 'Garden')"
+            data-action="filterCat"
           >
             <span class="cat-dot"></span>Garden Pipes<span
               class="cat-count"
@@ -113,7 +113,7 @@
           <button
             class="cat-btn"
             data-cat="OtherItems"
-            onclick="filterCat(this, 'OtherItems')"
+            data-action="filterCat"
           >
             <span class="cat-dot"></span>Other Products<span
               class="cat-count"
@@ -148,10 +148,10 @@
     </div>
 
     <!-- Enquiry Modal -->
-    <div class="modal-overlay" id="enquiryModal" onclick="closeEnqModal(event)">
-      <div class="enq-modal" onclick="event.stopPropagation()">
+    <div class="modal-overlay" id="enquiryModal" data-action="closeEnqModal">
+      <div class="enq-modal" data-action="stop">
         <div class="enq-header">
-          <button class="modal-close" onclick="closeEnqModal(true)">✕</button>
+          <button class="modal-close" data-action="closeEnqModalForced">✕</button>
           <div class="enq-tag">Quote Request</div>
           <h3 id="eqTitle">Send Enquiry</h3>
         </div>
@@ -169,7 +169,7 @@
             id="eqMessage"
             placeholder="Describe your requirement, quantity needed, delivery location…"
           ></textarea>
-          <button class="enq-submit" onclick="submitEnquiry()">
+          <button class="enq-submit" data-action="submitEnquiry">
             Send via Email
           </button>
         </div>
