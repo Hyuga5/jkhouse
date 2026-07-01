@@ -573,6 +573,7 @@ nav {
   font-size: 19px;
   font-weight: 700;
   color: var(--ink);
+  
 }
 .prod-td-desc {
   font-size: 14px;
@@ -611,6 +612,15 @@ nav {
 .products-table tr:hover .prod-td-arrow {
   color: var(--red);
   transform: translateX(4px);
+}
+.prod-td-name a,
+.prod-td-icon a {
+  color: inherit;
+  text-decoration: none;
+}
+.prod-td-name a:hover,
+.prod-td-icon a:hover {
+  color: inherit;
 }
 
 #why {
