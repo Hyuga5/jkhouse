@@ -14,14 +14,13 @@
     />
     <link rel="canonical" href="https://jkhouse.com.np/product" />
     <link rel="stylesheet" href="/css/product.css" />
-    <script src="/js/product.js" defer></script>
   </head>
   <body>
     <div class="page-shell">
       <aside class="sidebar">
         <a
           href="#"
-          data-action="go-home"
+          onclick="goHome(event)"
           style="text-decoration: none; color: inherit"
         >
           <div class="sidebar-logo">
@@ -34,7 +33,7 @@
           <button
             class="cat-btn active"
             data-cat="All"
-            data-action="filter-cat"
+            onclick="filterCat(this, 'All')"
           >
             <span class="cat-dot"></span>All products<span
               class="cat-count"
@@ -44,7 +43,7 @@
           <button
             class="cat-btn"
             data-cat="CPVC"
-            data-action="filter-cat"
+            onclick="filterCat(this, 'CPVC')"
           >
             <span class="cat-dot"></span>CPVC<span
               class="cat-count"
@@ -54,7 +53,7 @@
           <button
             class="cat-btn"
             data-cat="PPR"
-            data-action="filter-cat"
+            onclick="filterCat(this, 'PPR')"
           >
             <span class="cat-dot"></span>PPR<span
               class="cat-count"
@@ -64,11 +63,61 @@
           <button
             class="cat-btn"
             data-cat="PVC"
-            data-action="filter-cat"
+            onclick="filterCat(this, 'PVC')"
           >
             <span class="cat-dot"></span>PVC / uPVC<span
               class="cat-count"
               id="cnt-PVC"
+            ></span>
+          </button>
+          <button
+            class="cat-btn"
+            data-cat="BoringPipe"
+            onclick="filterCat(this, 'BoringPipe')"
+          >
+            <span class="cat-dot"></span>Boring Pipe<span
+              class="cat-count"
+              id="cnt-BoringPipe"
+            ></span>
+          </button>
+          <button
+            class="cat-btn"
+            data-cat="HDPE"
+            onclick="filterCat(this, 'HDPE')"
+          >
+            <span class="cat-dot"></span>HDPE<span
+              class="cat-count"
+              id="cnt-HDPE"
+            ></span>
+          </button>
+          <button
+            class="cat-btn"
+            data-cat="Tank"
+            onclick="filterCat(this, 'Tank')"
+          >
+            <span class="cat-dot"></span>Tanks<span
+              class="cat-count"
+              id="cnt-Tank"
+            ></span>
+          </button>
+          <button
+            class="cat-btn"
+            data-cat="Garden"
+            onclick="filterCat(this, 'Garden')"
+          >
+            <span class="cat-dot"></span>Garden Pipes<span
+              class="cat-count"
+              id="cnt-Garden"
+            ></span>
+          </button>
+          <button
+            class="cat-btn"
+            data-cat="OtherItems"
+            onclick="filterCat(this, 'OtherItems')"
+          >
+            <span class="cat-dot"></span>Other Products<span
+              class="cat-count"
+              id="cnt-OtherItems"
             ></span>
           </button>
         </div>
@@ -99,10 +148,10 @@
     </div>
 
     <!-- Enquiry Modal -->
-    <div class="modal-overlay" id="enquiryModal" data-action="close-modal">
-      <div class="enq-modal" data-action="noop">
+    <div class="modal-overlay" id="enquiryModal" onclick="closeEnqModal(event)">
+      <div class="enq-modal" onclick="event.stopPropagation()">
         <div class="enq-header">
-          <button class="modal-close" data-action="close-modal">✕</button>
+          <button class="modal-close" onclick="closeEnqModal(true)">✕</button>
           <div class="enq-tag">Quote Request</div>
           <h3 id="eqTitle">Send Enquiry</h3>
         </div>
@@ -120,11 +169,12 @@
             id="eqMessage"
             placeholder="Describe your requirement, quantity needed, delivery location…"
           ></textarea>
-          <button class="enq-submit" data-action="submit-enquiry">
+          <button class="enq-submit" onclick="submitEnquiry()">
             Send via Email
           </button>
         </div>
       </div>
     </div>
+    <script src="/js/product.js"></script>
   </body>
 </html>
