@@ -3039,8 +3039,8 @@ const catTags = {
   PVC: "PVC / uPVC Solutions",
   BoringPipe: "Boring Pipe Solutions",
   HDPE: "HDPE Solutions",
-  NSHDPE: "NS HDPE Solutions",
-  NSQHDPE: "NSQ HDPE Solutions",
+  NSHDPE: "HDPE Solutions",
+  NSQHDPE: "HDPE Solutions",
   Tank: "Water Storage Solutions",
   Garden: "Garden Pipes",
   OtherItems: "Other Products",
@@ -3359,12 +3359,24 @@ function goHome(e) {
   currentCat = "All";
   currentHdpeSub = "All";
   searchQ = "";
-  document
-    .querySelectorAll(".cat-btn")
-    .forEach((b) => b.classList.remove("active"));
-  document.querySelector('.cat-btn[data-cat="All"]').classList.add("active");
   syncURLForCatalog();
   render();
+}
+
+function updateSidebarActiveState() {
+  // When a product detail page is open, the sidebar should highlight
+  // that product's category (not whatever category was last browsed).
+  let activeCat = currentCat;
+  if (selectedProductId) {
+    const p = PRODUCTS.find((x) => x.id === selectedProductId);
+    if (p) activeCat = p.category;
+  }
+  // The sidebar only has one "HDPE" button, but products are tagged with
+  // the more specific NSHDPE / NSQHDPE subcategories — treat both as HDPE.
+  if (activeCat === "NSHDPE" || activeCat === "NSQHDPE") activeCat = "HDPE";
+  document.querySelectorAll(".cat-btn").forEach((b) => {
+    b.classList.toggle("active", b.dataset.cat === activeCat);
+  });
 }
 
 function generateSpecsRows(specs) {
@@ -3430,6 +3442,7 @@ function renderRelated(p) {
 
 function render() {
   const wrapper = document.getElementById("main-content-wrapper");
+  updateSidebarActiveState();
 
   if (selectedProductId) {
     const product = PRODUCTS.find((p) => p.id === selectedProductId);
@@ -3598,10 +3611,6 @@ function filterCat(btn, cat) {
   selectedProductId = null;
   currentCat = cat;
   currentHdpeSub = "All";
-  document
-    .querySelectorAll(".cat-btn")
-    .forEach((b) => b.classList.remove("active"));
-  btn.classList.add("active");
   render();
 }
 function filterHdpeSub(chip, sub) {
@@ -3614,9 +3623,6 @@ function filterChip(chip, cat) {
   currentHdpeSub = "All";
   selectedProductId = null;
   render();
-  document
-    .querySelectorAll(".cat-btn")
-    .forEach((b) => b.classList.toggle("active", b.dataset.cat === cat));
 }
 function setView(v) {
   currentView = v;
@@ -3701,9 +3707,6 @@ function submitEnquiry() {
 }
 
 applyRouteFromLocation();
-document
-  .querySelectorAll(".cat-btn")
-  .forEach((b) => b.classList.toggle("active", b.dataset.cat === currentCat));
 render();
 
 let resizeTimer;
