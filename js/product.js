@@ -1531,253 +1531,155 @@ const PRODUCTS = [
   },
   {
     id: 72,
-    slug: "upvc-pipe-ns-206-2-5-kgf-cm",
+    slug: "upvc-pipe-ns-206-50mm",
     category: "PVC",
-    name: "uPVC Pipe NS-206 – 2.5 kgf/cm²",
-    description:
-      "ITPF Brand uPVC pipe manufactured as per NS-206, 2.5 kgf pressure rated.",
+    name: "uPVC Pipe NS-206 – 50mm",
+    description: "ITPF Brand uPVC NS Pipe manufactured as per NS-206, 50mm size.",
     specs: [
       "Standard: NS-206 ITPF Brand",
       "Material: uPVC",
+      "Size: 50mm",
       "Price per metre",
       "Inclusive of VAT",
     ],
-    variants: [
-      { size: '90mm (3")', price: 320 },
-      { size: '110mm (4")', price: 475 },
-      { size: '125mm (4½")', price: 605 },
-      { size: '140mm (5")', price: 750 },
-      { size: '160mm (6")', price: 980 },
-      { size: '180mm (7")', price: 1050 },
-      { size: '200mm (8")', price: 1465 },
-    ],
-    notes: "",
-    img: "/images/upvc-pipe-ns-206-2-5-kgf-cm.png",
+    variants: [{ size: "6 kg", price: null }],
+    notes: "Pricing pending — please confirm rates.",
+    img: "",
   },
   {
     id: 73,
-    slug: "upvc-pipe-ns-206-4-kgf-cm",
+    slug: "upvc-pipe-ns-206-75mm",
     category: "PVC",
-    name: "uPVC Pipe NS-206 – 4 kgf/cm²",
-    description:
-      "ITPF Brand uPVC pipe manufactured as per NS-206, 4 kgf pressure rated.",
+    name: "uPVC Pipe NS-206 – 75mm",
+    description: "ITPF Brand uPVC NS Pipe manufactured as per NS-206, 75mm size.",
     specs: [
       "Standard: NS-206 ITPF Brand",
       "Material: uPVC",
+      "Size: 75mm",
       "Price per metre",
       "Inclusive of VAT",
     ],
     variants: [
-      { size: '63mm (2")', price: 280 },
-      { size: '75mm (2½")', price: 345 },
-      { size: '90mm (3")', price: 530 },
-      { size: '110mm (4")', price: 670 },
-      { size: '125mm (4½")', price: 1000 },
-      { size: '140mm (5")', price: 1275 },
-      { size: '160mm (6")', price: 1530 },
-      { size: '180mm (7")', price: 1780 },
-      { size: '200mm (8")', price: 2565 },
+      { size: "4 kg", price: null },
+      { size: "6 kg", price: null },
     ],
-    notes: "",
-    img: "/images/upvc-pipe-ns-206-4-kgf-cm.png",
+    notes: "Pricing pending — please confirm rates.",
+    img: "",
   },
   {
     id: 74,
-    slug: "upvc-pipe-ns-206-6-kgf-cm",
+    slug: "upvc-pipe-ns-206-110mm",
     category: "PVC",
-    name: "uPVC Pipe NS-206 – 6 kgf/cm²",
-    description:
-      "ITPF Brand uPVC pipe manufactured as per NS-206, 6 kgf pressure rated.",
+    name: "uPVC Pipe NS-206 – 110mm",
+    description: "ITPF Brand uPVC NS Pipe manufactured as per NS-206, 110mm size.",
     specs: [
       "Standard: NS-206 ITPF Brand",
       "Material: uPVC",
+      "Size: 110mm",
       "Price per metre",
       "Inclusive of VAT",
     ],
     variants: [
-      { size: '50mm (1½")', price: 215 },
-      { size: '63mm (2")', price: 383 },
-      { size: '75mm (2½")', price: 525 },
-      { size: '90mm (3")', price: 775 },
-      { size: '110mm (4")', price: 1070 },
-      { size: '125mm (4½")', price: 1486 },
-      { size: '140mm (5")', price: 1850 },
-      { size: '160mm (6")', price: 2368 },
-      { size: '180mm (7")', price: 2532 },
-      { size: '200mm (8")', price: 3670 },
+      { size: "4 kg", price: null },
+      { size: "6 kg", price: null },
     ],
-    notes: "",
-    img: "/images/upvc-pipe-ns-206-6-kgf-cm.png",
-  },
-  {
-    id: 75,
-    slug: "boring-pipe-5kg-110mm",
-    category: "PVC",
-    name: "Boring Pipe 5kg×110mm",
-    description: "uPVC casing/boring pipe.",
-    specs: ["Material: uPVC", "Type: Boring/Casing Pipe", "Price per piece"],
-    variants: [{ size: "5kg×110mm", price: 1823 }],
-    notes: "",
-    img: "/images/boring-pipe-5kg-110mm.png",
+    notes: "Pricing pending — please confirm rates.",
+    img: "",
   },
   {
     id: 76,
-    slug: "boring-pipe-6kg-110mm",
+    slug: "upvc-pipe-ns-206-160mm",
     category: "PVC",
-    name: "Boring Pipe 6kg×110mm",
-    description: "uPVC casing/boring pipe.",
-    specs: ["Material: uPVC", "Type: Boring/Casing Pipe", "Price per piece"],
-    variants: [{ size: "6kg×110mm", price: 2110 }],
-    notes: "",
-    img: "/images/boring-pipe-6kg-110mm.png",
-  },
-  {
-    id: 77,
-    slug: "boring-pipe-6kg-110mm-ns",
-    category: "PVC",
-    name: "Boring Pipe 6kg×110mm NS",
-    description: "uPVC casing/boring pipe NS grade.",
-    specs: ["Material: uPVC", "Type: Boring/Casing Pipe", "Price per piece"],
-    variants: [{ size: "6kg×110mm NS", price: 2300 }],
-    notes: "",
-    img: "/images/boring-pipe-6kg-110mm-ns.png",
-  },
-  {
-    id: 78,
-    slug: "boring-pipe-7kg-114mm",
-    category: "PVC",
-    name: "Boring Pipe 7kg×114mm",
-    description: "uPVC casing/boring pipe.",
-    specs: ["Material: uPVC", "Type: Boring/Casing Pipe", "Price per piece"],
-    variants: [{ size: "7kg×114mm", price: 2513 }],
-    notes: "",
-    img: "/images/boring-pipe-7kg-114mm.png",
-  },
-  {
-    id: 79,
-    slug: "boring-pipe-8kg-114mm",
-    category: "PVC",
-    name: "Boring Pipe 8kg×114mm",
-    description: "uPVC casing/boring pipe.",
-    specs: ["Material: uPVC", "Type: Boring/Casing Pipe", "Price per piece"],
-    variants: [{ size: "8kg×114mm", price: 2875 }],
-    notes: "",
-    img: "/images/boring-pipe-8kg-114mm.png",
-  },
-  {
-    id: 80,
-    slug: "boring-pipe-12kg-160mm",
-    category: "PVC",
-    name: "Boring Pipe 12kg×160mm",
-    description: "uPVC heavy-duty casing/boring pipe.",
-    specs: ["Material: uPVC", "Type: Boring/Casing Pipe", "Price per piece"],
-    variants: [{ size: "12kg×160mm", price: 4600 }],
-    notes: "",
-    img: "/images/boring-pipe-12kg-160mm.png",
-  },
-  {
-    id: 81,
-    slug: "upvc-pipe-commercial-2-5-kgf-cm",
-    category: "PVC",
-    name: "uPVC Pipe Commercial – 2.5 kgf/cm²",
-    description: "Commercial ITPF Brand uPVC pipe, 2.5 kgf pressure rated.",
+    name: "uPVC Pipe NS-206 – 160mm",
+    description: "ITPF Brand uPVC NS Pipe manufactured as per NS-206, 160mm size.",
     specs: [
-      "Standard: Commercial ITPF Brand",
+      "Standard: NS-206 ITPF Brand",
       "Material: uPVC",
+      "Size: 160mm",
       "Price per metre",
-      "Price inclusive of VAT",
+      "Inclusive of VAT",
+    ],
+    variants: [{ size: "4 kg", price: null }],
+    notes: "Pricing pending — please confirm rates.",
+    img: "",
+  },
+  {
+    id: 500,
+    slug: "upvc-commercial-pipe-50mm",
+    category: "PVC",
+    name: "uPVC Commercial Pipe – 50mm",
+    description: "uPVC Commercial-grade pipe, 50mm size.",
+    specs: [
+      "Type: Commercial Pipe",
+      "Material: uPVC",
+      "Size: 50mm",
+      "Price per metre",
+      "Inclusive of VAT",
     ],
     variants: [
-      { size: '90mm (3")', price: 256 },
-      { size: '110mm (4")', price: 381 },
-      { size: '125mm (4½")', price: 486 },
-      { size: '140mm (5")', price: 598 },
-      { size: '160mm (6")', price: 785 },
-      { size: '180mm (7")', price: 840 },
-      { size: '200mm (8")', price: 1225 },
+      { size: "6 kg", price: 181 },
     ],
-    notes: "Commercial grade",
-    img: "/images/upvc-pipe-commercial-2-5-kgf-cm.png",
+    notes: "",
+    img: "",
   },
   {
-    id: 82,
-    slug: "upvc-pipe-commercial-4-kgf-cm",
+    id: 501,
+    slug: "upvc-commercial-pipe-63mm",
     category: "PVC",
-    name: "uPVC Pipe Commercial – 4 kgf/cm²",
-    description: "Commercial ITPF Brand uPVC pipe, 4 kgf pressure rated.",
+    name: "uPVC Commercial Pipe – 63mm",
+    description: "uPVC Commercial-grade pipe, 63mm size.",
     specs: [
-      "Standard: Commercial ITPF Brand",
+      "Type: Commercial Pipe",
       "Material: uPVC",
+      "Size: 63mm",
       "Price per metre",
-      "Price inclusive of VAT",
+      "Inclusive of VAT",
     ],
     variants: [
-      { size: '63mm (2")', price: 216 },
-      { size: '75mm (2½")', price: 282 },
-      { size: '90mm (3")', price: 424 },
-      { size: '110mm (4")', price: 540 },
-      { size: '125mm (4½")', price: 800 },
-      { size: '140mm (5")', price: 1020 },
-      { size: '160mm (6")', price: 1245 },
-      { size: '180mm (7")', price: 1420 },
-      { size: '200mm (8")', price: 2050 },
+      { size: "4 kg", price: 216 },
     ],
-    notes: "Commercial grade",
-    img: "/images/upvc-pipe-commercial-4-kgf-cm.png",
+    notes: "",
+    img: "",
   },
   {
-    id: 83,
-    slug: "upvc-pipe-commercial-6-kgf-cm",
+    id: 502,
+    slug: "upvc-commercial-pipe-75mm",
     category: "PVC",
-    name: "uPVC Pipe Commercial – 6 kgf/cm²",
-    description: "Commercial ITPF Brand uPVC pipe, 6 kgf pressure rated.",
+    name: "uPVC Commercial Pipe – 75mm",
+    description: "uPVC Commercial-grade pipe, 75mm size.",
     specs: [
-      "Standard: Commercial ITPF Brand",
+      "Type: Commercial Pipe",
       "Material: uPVC",
+      "Size: 75mm",
       "Price per metre",
-      "Price inclusive of VAT",
+      "Inclusive of VAT",
     ],
     variants: [
-      { size: '50mm (1½")', price: 181 },
-      { size: '63mm (2")', price: 306 },
-      { size: '75mm (2½")', price: 405 },
-      { size: '90mm (3")', price: 620 },
-      { size: '110mm (4")', price: 852 },
-      { size: '125mm (4½")', price: 1190 },
-      { size: '140mm (5")', price: 1480 },
-      { size: '160mm (6")', price: 1825 },
-      { size: '180mm (7")', price: 2025 },
-      { size: '200mm (8")', price: 2960 },
+      { size: "4 kg", price: 282 },
+      { size: "6 kg", price: 405 },
     ],
-    notes: "Commercial grade",
-    img: "/images/upvc-pipe-commercial-6-kgf-cm.png",
+    notes: "",
+    img: "",
   },
   {
-    id: 84,
-    slug: "upvc-pipe-commercial-10-kgf-cm",
+    id: 504,
+    slug: "upvc-commercial-pipe-110mm",
     category: "PVC",
-    name: "uPVC Pipe Commercial – 10 kgf/cm²",
-    description: "Commercial ITPF Brand uPVC pipe, 10 kgf pressure rated.",
+    name: "uPVC Commercial Pipe – 110mm",
+    description: "uPVC Commercial-grade pipe, 110mm size.",
     specs: [
-      "Standard: Commercial ITPF Brand",
+      "Type: Commercial Pipe",
       "Material: uPVC",
+      "Size: 110mm",
       "Price per metre",
-      "Price inclusive of VAT",
+      "Inclusive of VAT",
     ],
     variants: [
-      { size: '50mm (1½")', price: 256 },
-      { size: '63mm (2")', price: 475 },
-      { size: '75mm (2½")', price: 705 },
-      { size: '90mm (3")', price: 966 },
-      { size: '110mm (4")', price: 1432 },
-      { size: '125mm (4½")', price: 1945 },
-      { size: '140mm (5")', price: 2315 },
-      { size: '160mm (6")', price: 2980 },
-      { size: '180mm (7")', price: 3185 },
-      { size: '200mm (8")', price: 4690 },
+      { size: "4 kg", price: 540 },
+      { size: "6 kg", price: 852 },
     ],
-    notes: "Commercial grade",
-    img: "/images/upvc-pipe-commercial-10-kgf-cm.png",
+    notes: "",
+    img: "",
   },
   {
     id: 85,
@@ -2979,7 +2881,7 @@ const PRODUCTS = [
   {
     id: 307,
     slug: "nailon-dori",
-    category: "OtherItems",
+    category: "PlasticProducts",
     name: "Nailon Dori",
     description: "Nylon rope, sold by weight.",
     specs: ["Type: Rope", "Material: Nylon", "Price per kg"],
@@ -2990,7 +2892,7 @@ const PRODUCTS = [
   {
     id: 308,
     slug: "seto-plastic",
-    category: "OtherItems",
+    category: "PlasticProducts",
     name: "Seto Plastic",
     description: "White plastic sheeting, sold by weight.",
     specs: ["Type: Plastic Sheeting", "Colour: White", "Price per kg"],
@@ -3001,7 +2903,7 @@ const PRODUCTS = [
   {
     id: 309,
     slug: "kalo-plastic",
-    category: "OtherItems",
+    category: "PlasticProducts",
     name: "Kalo Plastic",
     description: "Black plastic sheeting, sold by weight.",
     specs: ["Type: Plastic Sheeting", "Colour: Black", "Price per kg"],
@@ -3012,12 +2914,66 @@ const PRODUCTS = [
   {
     id: 310,
     slug: "dhalan-plastic",
-    category: "OtherItems",
+    category: "PlasticProducts",
     name: "Dhalan Plastic",
     description: "Dhalan (casting) plastic sheeting, sold by weight.",
     specs: ["Type: Plastic Sheeting", "Price per kg"],
     variants: [{ size: "Per Kg", price: 250 }],
     notes: "",
+    img: "",
+  },
+  {
+    id: 311,
+    slug: "ob-tripal-orange-blue",
+    category: "PlasticProducts",
+    name: "O/B Tripal (Orange Blue)",
+    description:
+      "Orange/Blue tripal sheet, available in a range of sizes from small covers to extra-large industrial tarpaulins.",
+    specs: [
+      "Type: Tripal Sheet",
+      "Colour: Orange / Blue",
+      "Small (6x9 ft, 9x12 ft): bikes, small tents, patio furniture covers",
+      "Medium (12x15 ft, 15x18 ft): small cars, small roofs, camping",
+      "Large (18x24 ft, 20x40 ft): boats, large roofs, farm use",
+      "Extra Large (up to 60x40 ft): large tents, big industrial use",
+    ],
+    variants: [
+      { size: "6x9 ft", price: 297 },
+      { size: "9x12 ft", price: 594 },
+      { size: "12x15 ft", price: 990 },
+      { size: "15x18 ft", price: 1485 },
+      { size: "18x24 ft", price: 2376 },
+      { size: "20x40 ft", price: 4400 },
+      { size: "60x40 ft", price: 13200 },
+    ],
+    notes: "Price is per sq. ft. (Rs. 5.5/sq ft).",
+    img: "",
+  },
+  {
+    id: 312,
+    slug: "check-tripal",
+    category: "PlasticProducts",
+    name: "Check Tripal",
+    description:
+      "Check-pattern tripal sheet, available in a range of sizes from small covers to extra-large industrial tarpaulins.",
+    specs: [
+      "Type: Tripal Sheet",
+      "Pattern: Check",
+      "Small (6x9 ft, 9x12 ft): bikes, small tents, patio furniture covers",
+      "Medium (12x15 ft, 15x18 ft): small cars, small roofs, camping",
+      "Large (18x24 ft, 20x40 ft): boats, large roofs, farm use",
+      "Extra Large (up to 60x40 ft): large tents, big industrial use",
+    ],
+    variants: [
+      { size: "6x9 ft", price: 243 },
+      { size: "9x12 ft", price: 486 },
+      { size: "12x15 ft", price: 810 },
+      { size: "15x18 ft", price: 1215 },
+      { size: "18x24 ft", price: 1944 },
+      { size: "20x40 ft", price: 3600 },
+      { size: "60x40 ft", price: 10800 },
+    ],
+    notes: "Price is per sq. ft. (Rs. 4.5/sq ft).",
     img: "",
   },
 ];
@@ -3031,6 +2987,7 @@ const catLabels = {
   HDPE: "HDPE pipes",
   Tank: "Water storage tanks",
   Garden: "Garden pipes",
+  PlasticProducts: "Plastic products",
   OtherItems: "Other products",
 };
 const catTags = {
@@ -3039,10 +2996,11 @@ const catTags = {
   PVC: "PVC / uPVC Solutions",
   BoringPipe: "Boring Pipe Solutions",
   HDPE: "HDPE Solutions",
-  NSHDPE: "HDPE Solutions",
-  NSQHDPE: "HDPE Solutions",
+  NSHDPE: "NS HDPE Solutions",
+  NSQHDPE: "NSQ HDPE Solutions",
   Tank: "Water Storage Solutions",
   Garden: "Garden Pipes",
+  PlasticProducts: "Plastic Products",
   OtherItems: "Other Products",
 };
 let currentCat = "All",
@@ -3110,20 +3068,20 @@ function renderGrid(list) {
     .map((p) => {
       const price = p.variants[0] ? p.variants[0].price : null;
       return `
-    <div class="product-card" data-action="selectProduct" data-id="${p.id}">
+    <div class="product-card" onclick="selectProduct(${p.id})">
       <div class="product-img-wrap"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
       <div class="product-body">
         <div class="product-cat">${p.category}</div>
         <div class="product-name">${p.name}</div>
         <div class="product-desc">${p.description}</div>
-        <div class="size-row" data-action="stop">
-          <select class="size-select" id="gsel-${p.id}" data-action="updateGridPrice" data-id="${p.id}">
+        <div class="size-row" onclick="event.stopPropagation()">
+          <select class="size-select" id="gsel-${p.id}" onchange="updateGridPrice(${p.id})">
             ${sizeOptionsHTML(p, 0)}
           </select>
         </div>
         <div class="product-footer">
           <span class="price-badge" id="gprice-${p.id}">${fmtPrice(price)}</span>
-          <button class="enquire-btn" data-action="enquireFromCard" data-id="${p.id}">Send Quote</button>
+          <button class="enquire-btn" onclick="event.stopPropagation(); enquireFromCard(${p.id})">Send Quote</button>
         </div>
       </div>
     </div>`;
@@ -3136,7 +3094,7 @@ function renderList(list) {
     .map((p) => {
       const price = p.variants[0] ? p.variants[0].price : null;
       return `
-    <div class="product-list-card" data-action="selectProduct" data-id="${p.id}">
+    <div class="product-list-card" onclick="selectProduct(${p.id})">
       <div class="list-img-wrap"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
       <div class="list-body">
         <div class="list-info">
@@ -3144,12 +3102,12 @@ function renderList(list) {
           <div class="list-name">${p.name}</div>
           <div class="list-desc">${p.description}</div>
         </div>
-        <div class="list-actions" data-action="stop">
-          <select class="size-select" id="lsel-${p.id}" data-action="updateListPrice" data-id="${p.id}">
+        <div class="list-actions" onclick="event.stopPropagation()">
+          <select class="size-select" id="lsel-${p.id}" onchange="updateListPrice(${p.id})">
             ${sizeOptionsHTML(p, 0)}
           </select>
           <span class="price-badge" id="lprice-${p.id}">${fmtPrice(price)}</span>
-          <button class="enquire-btn" data-action="enquireFromCard" data-id="${p.id}">Send Quote</button>
+          <button class="enquire-btn" onclick="enquireFromCard(${p.id})">Send Quote</button>
         </div>
       </div>
     </div>`;
@@ -3176,6 +3134,11 @@ const SECTION_DEFS = [
     key: "Garden",
     label: "Garden Pipes",
     match: (p) => p.category === "Garden",
+  },
+  {
+    key: "PlasticProducts",
+    label: "Plastic Products",
+    match: (p) => p.category === "PlasticProducts",
   },
   {
     key: "OtherItems",
@@ -3205,7 +3168,7 @@ function renderSectioned(list, view) {
         <div class="${view === "grid" ? "products-grid" : "products-list"}">${inner}</div>
         ${
           items.length > limit
-            ? `<button class="section-viewall" data-action="filterChip" data-cat="${viewAllCat}">View all ${sec.label} (${items.length}) →</button>`
+            ? `<button class="section-viewall" onclick="filterChip(this,'${viewAllCat}')">View all ${sec.label} (${items.length}) →</button>`
             : ""
         }
       </div>`;
@@ -3237,13 +3200,17 @@ function enquireFromCard(id) {
 }
 
 /* ============================================================
-   Dedicated product URLs: /product/<slug>
-   Each product has a stable "slug" field (see PRODUCTS above).
+   Dedicated product URLs: /product/<section>/<slug>
+   Each product has a stable "slug" field (see PRODUCTS above),
+   and its category maps to a URL "section" segment (see
+   categoryUrlSegment below) — e.g. /product/hdpe/hdpe-pe100-16mm.
    We use the History API so every product gets its own real,
-   bookmarkable, shareable address — e.g. /product/cpvcpipe —
-   without reloading the page or re-fetching data.
-   NOTE: for /product/<slug> to load correctly on a direct hit
-   (typed URL, refresh, shared link, Google), the server must be
+   bookmarkable, shareable address without reloading the page or
+   re-fetching data. Old flat links (/product/<slug>, no section)
+   still resolve correctly — pathPartsAfterBase() always reads the LAST
+   path segment as the product slug, so both formats work.
+   NOTE: for these URLs to load correctly on a direct hit (typed
+   URL, refresh, shared link, Google), the server must be
    configured to serve product.html for any path under /product/*,
    the same way it already does for /product itself. See the
    .htaccess / Nginx notes provided alongside this file.
@@ -3264,6 +3231,38 @@ function getProductBySlug(slug) {
   return PRODUCTS.find((p) => p.slug === slug) || null;
 }
 
+const categoryUrlSegment = {
+  CPVC: "cpvc",
+  PPR: "ppr",
+  PVC: "pvc",
+  BoringPipe: "boring-pipe",
+  NSHDPE: "hdpe",
+  NSQHDPE: "hdpe",
+  HDPE: "hdpe",
+  Tank: "tanks",
+  Garden: "garden",
+  PlasticProducts: "plastic-products",
+  OtherItems: "other-products",
+};
+
+function getProductSectionSlug(p) {
+  return categoryUrlSegment[p.category] || p.category.toLowerCase();
+}
+
+// Reverse map: URL section segment -> the sidebar-level category used
+// for browsing (currentCat). Used to resolve /product/<section> URLs.
+const sectionToCurrentCat = {
+  cpvc: "CPVC",
+  ppr: "PPR",
+  pvc: "PVC",
+  "boring-pipe": "BoringPipe",
+  hdpe: "HDPE",
+  tanks: "Tank",
+  garden: "Garden",
+  "plastic-products": "PlasticProducts",
+  "other-products": "OtherItems",
+};
+
 const hashCategoryMap = {
   cpvc: "CPVC",
   upvc: "PVC",
@@ -3275,15 +3274,6 @@ const hashCategoryMap = {
   tanks: "Tank",
 };
 
-function slugFromPath(pathname) {
-  const path = pathname.replace(/\/+$/, "") || "/";
-  if (path === BASE_PATH) return null;
-  if (path.indexOf(BASE_PATH + "/") === 0) {
-    return decodeURIComponent(path.slice(BASE_PATH.length + 1));
-  }
-  return null;
-}
-
 function setSEOForProduct(p) {
   document.title = p.name + " | JK House and Suppliers";
   const desc =
@@ -3293,42 +3283,78 @@ function setSEOForProduct(p) {
   if (metaDescEl) metaDescEl.setAttribute("content", desc.slice(0, 160));
   canonicalEl.setAttribute(
     "href",
-    window.location.origin + BASE_PATH + "/" + p.slug,
+    window.location.origin + BASE_PATH + "/" + getProductSectionSlug(p) + "/" + p.slug,
   );
 }
 function setSEOForCatalog() {
-  document.title = defaultTitle;
+  document.title =
+    currentCat === "All"
+      ? defaultTitle
+      : (catLabels[currentCat] || currentCat) + " | JK House and Suppliers";
   if (metaDescEl) metaDescEl.setAttribute("content", defaultDesc);
-  canonicalEl.setAttribute("href", defaultCanonical);
+  const url =
+    currentCat === "All"
+      ? defaultCanonical
+      : window.location.origin +
+        BASE_PATH +
+        "/" +
+        (categoryUrlSegment[currentCat] || currentCat.toLowerCase());
+  canonicalEl.setAttribute("href", url);
 }
 
 function syncURLForProduct(p) {
-  const url = BASE_PATH + "/" + p.slug;
+  const url = BASE_PATH + "/" + getProductSectionSlug(p) + "/" + p.slug;
   if (window.location.pathname.replace(/\/+$/, "") !== url) {
     history.pushState({ slug: p.slug }, "", url);
   }
   setSEOForProduct(p);
 }
 function syncURLForCatalog() {
-  if (window.location.pathname.replace(/\/+$/, "") !== BASE_PATH) {
-    history.pushState({}, "", BASE_PATH);
+  const url =
+    currentCat === "All"
+      ? BASE_PATH
+      : BASE_PATH + "/" + (categoryUrlSegment[currentCat] || currentCat.toLowerCase());
+  if (window.location.pathname.replace(/\/+$/, "") !== url) {
+    history.pushState({}, "", url);
   }
   setSEOForCatalog();
 }
 
+function pathPartsAfterBase(pathname) {
+  const path = pathname.replace(/\/+$/, "") || "/";
+  if (path === BASE_PATH) return [];
+  if (path.indexOf(BASE_PATH + "/") === 0) {
+    return path
+      .slice(BASE_PATH.length + 1)
+      .split("/")
+      .filter(Boolean)
+      .map(decodeURIComponent);
+  }
+  return null;
+}
+
 function applyRouteFromLocation() {
-  const slug = slugFromPath(window.location.pathname);
-  if (slug) {
-    const p = getProductBySlug(slug);
+  const parts = pathPartsAfterBase(window.location.pathname);
+  selectedProductId = null;
+  currentCat = "All";
+
+  if (parts && parts.length) {
+    const lastSlug = parts[parts.length - 1];
+    const p = getProductBySlug(lastSlug);
     if (p) {
       selectedProductId = p.id;
       setSEOForProduct(p);
       return;
     }
-    // Unknown / removed slug — fall back to the catalogue and clean the URL.
-    history.replaceState({}, "", BASE_PATH);
+    if (parts.length === 1 && sectionToCurrentCat[parts[0]]) {
+      // Direct hit on a section/category URL, e.g. /product/hdpe
+      currentCat = sectionToCurrentCat[parts[0]];
+    } else {
+      // Unknown / removed slug or section — fall back to the catalogue.
+      history.replaceState({}, "", BASE_PATH);
+    }
   }
-  selectedProductId = null;
+
   const hash = window.location.hash.replace("#", "").toLowerCase();
   if (hash && hashCategoryMap[hash]) {
     currentCat = hashCategoryMap[hash];
@@ -3359,24 +3385,12 @@ function goHome(e) {
   currentCat = "All";
   currentHdpeSub = "All";
   searchQ = "";
+  document
+    .querySelectorAll(".cat-btn")
+    .forEach((b) => b.classList.remove("active"));
+  document.querySelector('.cat-btn[data-cat="All"]').classList.add("active");
   syncURLForCatalog();
   render();
-}
-
-function updateSidebarActiveState() {
-  // When a product detail page is open, the sidebar should highlight
-  // that product's category (not whatever category was last browsed).
-  let activeCat = currentCat;
-  if (selectedProductId) {
-    const p = PRODUCTS.find((x) => x.id === selectedProductId);
-    if (p) activeCat = p.category;
-  }
-  // The sidebar only has one "HDPE" button, but products are tagged with
-  // the more specific NSHDPE / NSQHDPE subcategories — treat both as HDPE.
-  if (activeCat === "NSHDPE" || activeCat === "NSQHDPE") activeCat = "HDPE";
-  document.querySelectorAll(".cat-btn").forEach((b) => {
-    b.classList.toggle("active", b.dataset.cat === activeCat);
-  });
 }
 
 function generateSpecsRows(specs) {
@@ -3426,7 +3440,7 @@ function renderRelated(p) {
         ${sample
           .map(
             (r) => `
-          <div class="related-card" data-action="selectProduct" data-id="${r.id}">
+          <div class="related-card" onclick="selectProduct(${r.id})">
             <div class="related-img-wrap"><img src="${r.img}" alt="${r.name}" loading="lazy"></div>
             <div class="related-body">
               <div class="related-cat">${r.category}</div>
@@ -3442,13 +3456,12 @@ function renderRelated(p) {
 
 function render() {
   const wrapper = document.getElementById("main-content-wrapper");
-  updateSidebarActiveState();
 
   if (selectedProductId) {
     const product = PRODUCTS.find((p) => p.id === selectedProductId);
     wrapper.innerHTML = `
       <div class="topbar">
-        <button class="back-btn" data-action="closeDetail">
+        <button class="back-btn" onclick="closeDetail()">
           <svg style="width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
           Back to catalogue
         </button>
@@ -3470,7 +3483,7 @@ function render() {
           <div class="variant-section">
             <div class="variant-label">Choose size / variant</div>
             <div class="variant-picker">
-              <select id="detail-size-select" data-action="updateDetailPrice" data-id="${product.id}">
+              <select id="detail-size-select" onchange="updateDetailPrice(${product.id})">
                 ${sizeOptionsHTML(product, 0)}
               </select>
               <div class="variant-price" id="detail-price">${fmtPrice(product.variants[0]?.price)}</div>
@@ -3482,7 +3495,7 @@ function render() {
               <strong>MRP inclusive of 13% VAT</strong>
               Get instant pricing quotes for hardware outlets or sites across Nepal.
             </div>
-            <button class="enquire-btn" style="padding:12px 24px;font-size:13px;border-radius:8px" data-action="openEnquiry" data-id="${product.id}">Send Quote</button>
+            <button class="enquire-btn" style="padding:12px 24px;font-size:13px;border-radius:8px" onclick="openEnquiry(${product.id})">Send Quote</button>
           </div>
         </div>
       </div>
@@ -3496,13 +3509,13 @@ function render() {
       <div class="topbar-title" id="page-title">All products</div>
       <div class="search-wrap">
         <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 15.803 7.5 7.5 0 0015.803 15.803z"/></svg>
-        <input type="text" id="search-input" value="${searchQ}" placeholder="Search products..." data-action="handleSearch">
+        <input type="text" id="search-input" value="${searchQ}" placeholder="Search products..." oninput="handleSearch()">
       </div>
       <div class="view-toggle">
-        <button class="vbtn ${currentView === "grid" ? "active" : ""}" id="vbtn-grid" data-action="setView" data-view="grid">
+        <button class="vbtn ${currentView === "grid" ? "active" : ""}" id="vbtn-grid" onclick="setView('grid')">
           <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"/></svg>
         </button>
-        <button class="vbtn ${currentView === "list" ? "active" : ""}" id="vbtn-list" data-action="setView" data-view="list">
+        <button class="vbtn ${currentView === "list" ? "active" : ""}" id="vbtn-list" onclick="setView('list')">
           <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
         </button>
       </div>
@@ -3530,23 +3543,24 @@ function render() {
       currentCat === "HDPE"
         ? `
     <div class="filter-bar">
-      <button class="filter-chip ${currentHdpeSub === "All" ? "active" : ""}" data-action="filterHdpeSub" data-sub="All">All HDPE</button>
-      <button class="filter-chip ${currentHdpeSub === "NSHDPE" ? "active" : ""}" data-action="filterHdpeSub" data-sub="NSHDPE">NS HDPE</button>
-      <button class="filter-chip ${currentHdpeSub === "NSQHDPE" ? "active" : ""}" data-action="filterHdpeSub" data-sub="NSQHDPE">NSQ HDPE</button>
+      <button class="filter-chip ${currentHdpeSub === "All" ? "active" : ""}" onclick="filterHdpeSub(this,'All')">All HDPE</button>
+      <button class="filter-chip ${currentHdpeSub === "NSHDPE" ? "active" : ""}" onclick="filterHdpeSub(this,'NSHDPE')">NS HDPE</button>
+      <button class="filter-chip ${currentHdpeSub === "NSQHDPE" ? "active" : ""}" onclick="filterHdpeSub(this,'NSQHDPE')">NSQ HDPE</button>
     </div>`
         : ""
     }
 
     <div class="filter-bar">
-      <button class="filter-chip ${currentCat === "All" ? "active" : ""}" data-action="filterChip" data-cat="All">All</button>
-      <button class="filter-chip ${currentCat === "CPVC" ? "active" : ""}" data-action="filterChip" data-cat="CPVC">CPVC</button>
-      <button class="filter-chip ${currentCat === "PPR" ? "active" : ""}" data-action="filterChip" data-cat="PPR">PPR</button>
-      <button class="filter-chip ${currentCat === "PVC" ? "active" : ""}" data-action="filterChip" data-cat="PVC">PVC / uPVC</button>
-      <button class="filter-chip ${currentCat === "BoringPipe" ? "active" : ""}" data-action="filterChip" data-cat="BoringPipe">Boring Pipe</button>
-      <button class="filter-chip ${currentCat === "HDPE" ? "active" : ""}" data-action="filterChip" data-cat="HDPE">HDPE</button>
-      <button class="filter-chip ${currentCat === "Tank" ? "active" : ""}" data-action="filterChip" data-cat="Tank">Tanks</button>
-      <button class="filter-chip ${currentCat === "Garden" ? "active" : ""}" data-action="filterChip" data-cat="Garden">Garden Pipes</button>
-      <button class="filter-chip ${currentCat === "OtherItems" ? "active" : ""}" data-action="filterChip" data-cat="OtherItems">Other Products</button>
+      <button class="filter-chip ${currentCat === "All" ? "active" : ""}" onclick="filterChip(this,'All')">All</button>
+      <button class="filter-chip ${currentCat === "CPVC" ? "active" : ""}" onclick="filterChip(this,'CPVC')">CPVC</button>
+      <button class="filter-chip ${currentCat === "PPR" ? "active" : ""}" onclick="filterChip(this,'PPR')">PPR</button>
+      <button class="filter-chip ${currentCat === "PVC" ? "active" : ""}" onclick="filterChip(this,'PVC')">PVC / uPVC</button>
+      <button class="filter-chip ${currentCat === "BoringPipe" ? "active" : ""}" onclick="filterChip(this,'BoringPipe')">Boring Pipe</button>
+      <button class="filter-chip ${currentCat === "HDPE" ? "active" : ""}" onclick="filterChip(this,'HDPE')">HDPE</button>
+      <button class="filter-chip ${currentCat === "Tank" ? "active" : ""}" onclick="filterChip(this,'Tank')">Tanks</button>
+      <button class="filter-chip ${currentCat === "Garden" ? "active" : ""}" onclick="filterChip(this,'Garden')">Garden Pipes</button>
+      <button class="filter-chip ${currentCat === "PlasticProducts" ? "active" : ""}" onclick="filterChip(this,'PlasticProducts')">Plastic Products</button>
+      <button class="filter-chip ${currentCat === "OtherItems" ? "active" : ""}" onclick="filterChip(this,'OtherItems')">Other Products</button>
       <span class="result-count" id="result-count">0 products</span>
     </div>
 
@@ -3603,6 +3617,8 @@ function updateSidebarCounts() {
     "(" + PRODUCTS.filter((p) => p.category === "Tank").length + ")";
   document.getElementById("cnt-Garden").textContent =
     "(" + PRODUCTS.filter((p) => p.category === "Garden").length + ")";
+  document.getElementById("cnt-PlasticProducts").textContent =
+    "(" + PRODUCTS.filter((p) => p.category === "PlasticProducts").length + ")";
   document.getElementById("cnt-OtherItems").textContent =
     "(" + PRODUCTS.filter((p) => p.category === "OtherItems").length + ")";
 }
@@ -3611,6 +3627,11 @@ function filterCat(btn, cat) {
   selectedProductId = null;
   currentCat = cat;
   currentHdpeSub = "All";
+  document
+    .querySelectorAll(".cat-btn")
+    .forEach((b) => b.classList.remove("active"));
+  btn.classList.add("active");
+  syncURLForCatalog();
   render();
 }
 function filterHdpeSub(chip, sub) {
@@ -3622,7 +3643,11 @@ function filterChip(chip, cat) {
   currentCat = cat;
   currentHdpeSub = "All";
   selectedProductId = null;
+  syncURLForCatalog();
   render();
+  document
+    .querySelectorAll(".cat-btn")
+    .forEach((b) => b.classList.toggle("active", b.dataset.cat === cat));
 }
 function setView(v) {
   currentView = v;
@@ -3702,11 +3727,14 @@ function submitEnquiry() {
       "\n\n---\nSent from ITPF Catalogue",
   );
   window.location.href =
-    "mailto:itpf@intertech.com.np?subject=" + subject + "&body=" + body;
+    "mailto:jkhouseandsuppliers7@gmail.com?subject=" + subject + "&body=" + body;
   closeEnqModal(true);
 }
 
 applyRouteFromLocation();
+document
+  .querySelectorAll(".cat-btn")
+  .forEach((b) => b.classList.toggle("active", b.dataset.cat === currentCat));
 render();
 
 let resizeTimer;
@@ -3715,87 +3743,4 @@ window.addEventListener("resize", () => {
   resizeTimer = setTimeout(() => {
     if (currentCat === "All" && !selectedProductId) render();
   }, 200);
-});
-
-/* ============================================================
-   CSP-safe event delegation
-   All markup (static in product.html and dynamically generated
-   in this file) uses data-action / data-id / data-cat / data-sub /
-   data-view attributes instead of inline onclick/onchange/oninput.
-   That's required because the site's Content-Security-Policy
-   (script-src 'self' ...) blocks inline event handler attributes.
-   These three listeners on document handle every interactive
-   element, including ones rendered after the page loads.
-   ============================================================ */
-document.addEventListener("click", function (e) {
-  const el = e.target.closest("[data-action]");
-  if (!el) return;
-  const action = el.dataset.action;
-  const id = el.dataset.id ? Number(el.dataset.id) : undefined;
-
-  switch (action) {
-    case "stop":
-      // Wrapper elements (size-row, list-actions, enq-modal box) that
-      // exist only to stop a click from bubbling to a parent card/overlay.
-      break;
-    case "goHome":
-      goHome(e);
-      break;
-    case "filterCat":
-      filterCat(el, el.dataset.cat);
-      break;
-    case "filterChip":
-      filterChip(el, el.dataset.cat);
-      break;
-    case "filterHdpeSub":
-      filterHdpeSub(el, el.dataset.sub);
-      break;
-    case "setView":
-      setView(el.dataset.view);
-      break;
-    case "selectProduct":
-      selectProduct(id);
-      break;
-    case "closeDetail":
-      closeDetail();
-      break;
-    case "enquireFromCard":
-      enquireFromCard(id);
-      break;
-    case "openEnquiry":
-      openEnquiry(id);
-      break;
-    case "submitEnquiry":
-      submitEnquiry();
-      break;
-    case "closeEnqModal":
-      closeEnqModal(e);
-      break;
-    case "closeEnqModalForced":
-      closeEnqModal(true);
-      break;
-  }
-});
-
-document.addEventListener("change", function (e) {
-  const el = e.target.closest("[data-action]");
-  if (!el) return;
-  const id = el.dataset.id ? Number(el.dataset.id) : undefined;
-  switch (el.dataset.action) {
-    case "updateGridPrice":
-      updateGridPrice(id);
-      break;
-    case "updateListPrice":
-      updateListPrice(id);
-      break;
-    case "updateDetailPrice":
-      updateDetailPrice(id);
-      break;
-  }
-});
-
-document.addEventListener("input", function (e) {
-  const el = e.target.closest("[data-action]");
-  if (!el) return;
-  if (el.dataset.action === "handleSearch") handleSearch();
 });
