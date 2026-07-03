@@ -704,55 +704,198 @@ const PRODUCTS = [
     img: "/images/ppr-3-layer-rolled-pipe.png",
   },
   {
-    id: 33,
-    slug: "pn-10-sdr-11-pipe",
+    id: 600,
+    slug: "ppr-ns552-3layer-pipe-20mm",
     category: "PPR",
-    name: "PN 10 / SDR 11 Pipe",
+    name: "PPR NS-552 3 Layer Pipe – 20mm",
     description:
-      "3-layer PPR pipe, standard PN10/SDR11 rated for hot & cold water.",
+      "3-layer PPR pipe, 20mm size, as per NS-552. Choose pressure rating (PN).",
     specs: [
       "Material: 3-Layer PPR",
       "Standard: NS-552",
+      "Size: 20mm",
       "Price per metre",
       "Available in 3m lengths",
       "Inclusive of VAT and taxes",
     ],
     variants: [
-      { size: "50mm", price: 630 },
-      { size: "63mm", price: 990 },
-      { size: "75mm", price: 1395 },
-      { size: "90mm", price: 2280 },
-      { size: "110mm", price: 3380 },
+      { size: "PN 16 / SDR 7.4", price: 140 },
     ],
     notes: "",
-    img: "/images/pn-10-sdr-11-pipe.png",
+    img: "",
   },
   {
-    id: 35,
-    slug: "pn-16-sdr-7-4-pipe",
+    id: 601,
+    slug: "ppr-ns552-3layer-pipe-25mm",
     category: "PPR",
-    name: "PN 16 / SDR 7.4 Pipe",
-    description: "3-layer PPR pipe, high-pressure PN16/SDR7.4 rated.",
+    name: "PPR NS-552 3 Layer Pipe – 25mm",
+    description:
+      "3-layer PPR pipe, 25mm size, as per NS-552. Choose pressure rating (PN).",
     specs: [
       "Material: 3-Layer PPR",
       "Standard: NS-552",
+      "Size: 25mm",
       "Price per metre",
       "Available in 3m lengths",
       "Inclusive of VAT and taxes",
     ],
     variants: [
-      { size: "20mm", price: 140 },
-      { size: "25mm", price: 227 },
-      { size: "32mm", price: 366 },
-      { size: "40mm", price: 570 },
-      { size: "50mm", price: 890 },
-      { size: "63mm", price: 1385 },
-      { size: "75mm", price: 1915 },
-      { size: "90mm", price: 2680 },
-      { size: "110mm", price: 4095 },
+      { size: "PN 16 / SDR 7.4", price: 227 },
     ],
     notes: "",
-    img: "/images/pn-16-sdr-7-4-pipe.png",
+    img: "",
+  },
+  {
+    id: 602,
+    slug: "ppr-ns552-3layer-pipe-32mm",
+    category: "PPR",
+    name: "PPR NS-552 3 Layer Pipe – 32mm",
+    description:
+      "3-layer PPR pipe, 32mm size, as per NS-552. Choose pressure rating (PN).",
+    specs: [
+      "Material: 3-Layer PPR",
+      "Standard: NS-552",
+      "Size: 32mm",
+      "Price per metre",
+      "Available in 3m lengths",
+      "Inclusive of VAT and taxes",
+    ],
+    variants: [
+      { size: "PN 16 / SDR 7.4", price: 366 },
+    ],
+    notes: "",
+    img: "",
+  },
+  {
+    id: 603,
+    slug: "ppr-ns552-3layer-pipe-40mm",
+    category: "PPR",
+    name: "PPR NS-552 3 Layer Pipe – 40mm",
+    description:
+      "3-layer PPR pipe, 40mm size, as per NS-552. Choose pressure rating (PN).",
+    specs: [
+      "Material: 3-Layer PPR",
+      "Standard: NS-552",
+      "Size: 40mm",
+      "Price per metre",
+      "Available in 3m lengths",
+      "Inclusive of VAT and taxes",
+    ],
+    variants: [
+      { size: "PN 16 / SDR 7.4", price: 570 },
+    ],
+    notes: "",
+    img: "",
+  },
+  {
+    id: 604,
+    slug: "ppr-ns552-3layer-pipe-50mm",
+    category: "PPR",
+    name: "PPR NS-552 3 Layer Pipe – 50mm",
+    description:
+      "3-layer PPR pipe, 50mm size, as per NS-552. Choose pressure rating (PN).",
+    specs: [
+      "Material: 3-Layer PPR",
+      "Standard: NS-552",
+      "Size: 50mm",
+      "Price per metre",
+      "Available in 3m lengths",
+      "Inclusive of VAT and taxes",
+    ],
+    variants: [
+      { size: "PN 10 / SDR 11", price: 630 },
+      { size: "PN 16 / SDR 7.4", price: 890 },
+    ],
+    notes: "",
+    img: "",
+  },
+  {
+    id: 605,
+    slug: "ppr-ns552-3layer-pipe-63mm",
+    category: "PPR",
+    name: "PPR NS-552 3 Layer Pipe – 63mm",
+    description:
+      "3-layer PPR pipe, 63mm size, as per NS-552. Choose pressure rating (PN).",
+    specs: [
+      "Material: 3-Layer PPR",
+      "Standard: NS-552",
+      "Size: 63mm",
+      "Price per metre",
+      "Available in 3m lengths",
+      "Inclusive of VAT and taxes",
+    ],
+    variants: [
+      { size: "PN 10 / SDR 11", price: 990 },
+      { size: "PN 16 / SDR 7.4", price: 1385 },
+    ],
+    notes: "",
+    img: "",
+  },
+  {
+    id: 606,
+    slug: "ppr-ns552-3layer-pipe-75mm",
+    category: "PPR",
+    name: "PPR NS-552 3 Layer Pipe – 75mm",
+    description:
+      "3-layer PPR pipe, 75mm size, as per NS-552. Choose pressure rating (PN).",
+    specs: [
+      "Material: 3-Layer PPR",
+      "Standard: NS-552",
+      "Size: 75mm",
+      "Price per metre",
+      "Available in 3m lengths",
+      "Inclusive of VAT and taxes",
+    ],
+    variants: [
+      { size: "PN 10 / SDR 11", price: 1395 },
+      { size: "PN 16 / SDR 7.4", price: 1915 },
+    ],
+    notes: "",
+    img: "",
+  },
+  {
+    id: 607,
+    slug: "ppr-ns552-3layer-pipe-90mm",
+    category: "PPR",
+    name: "PPR NS-552 3 Layer Pipe – 90mm",
+    description:
+      "3-layer PPR pipe, 90mm size, as per NS-552. Choose pressure rating (PN).",
+    specs: [
+      "Material: 3-Layer PPR",
+      "Standard: NS-552",
+      "Size: 90mm",
+      "Price per metre",
+      "Available in 3m lengths",
+      "Inclusive of VAT and taxes",
+    ],
+    variants: [
+      { size: "PN 10 / SDR 11", price: 2280 },
+      { size: "PN 16 / SDR 7.4", price: 2680 },
+    ],
+    notes: "",
+    img: "",
+  },
+  {
+    id: 608,
+    slug: "ppr-ns552-3layer-pipe-110mm",
+    category: "PPR",
+    name: "PPR NS-552 3 Layer Pipe – 110mm",
+    description:
+      "3-layer PPR pipe, 110mm size, as per NS-552. Choose pressure rating (PN).",
+    specs: [
+      "Material: 3-Layer PPR",
+      "Standard: NS-552",
+      "Size: 110mm",
+      "Price per metre",
+      "Available in 3m lengths",
+      "Inclusive of VAT and taxes",
+    ],
+    variants: [
+      { size: "PN 10 / SDR 11", price: 3380 },
+      { size: "PN 16 / SDR 7.4", price: 4095 },
+    ],
+    notes: "",
+    img: "",
   },
   {
     id: 37,
@@ -3249,6 +3392,12 @@ function getProductSectionSlug(p) {
   return categoryUrlSegment[p.category] || p.category.toLowerCase();
 }
 
+function getCurrentCatForProduct(p) {
+  return (
+    sectionToCurrentCat[getProductSectionSlug(p)] || p.category || "All"
+  );
+}
+
 // Reverse map: URL section segment -> the sidebar-level category used
 // for browsing (currentCat). Used to resolve /product/<section> URLs.
 const sectionToCurrentCat = {
@@ -3343,6 +3492,7 @@ function applyRouteFromLocation() {
     const p = getProductBySlug(lastSlug);
     if (p) {
       selectedProductId = p.id;
+      currentCat = getCurrentCatForProduct(p);
       setSEOForProduct(p);
       return;
     }
@@ -3364,6 +3514,9 @@ function applyRouteFromLocation() {
 
 window.addEventListener("popstate", function () {
   applyRouteFromLocation();
+  document
+    .querySelectorAll(".cat-btn")
+    .forEach((b) => b.classList.toggle("active", b.dataset.cat === currentCat));
   render();
 });
 
