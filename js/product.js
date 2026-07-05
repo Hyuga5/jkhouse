@@ -3523,7 +3523,15 @@ window.addEventListener("popstate", function () {
 function selectProduct(id) {
   selectedProductId = id;
   const p = PRODUCTS.find((x) => x.id === id);
-  if (p) syncURLForProduct(p);
+  if (p) {
+    currentCat = getCurrentCatForProduct(p);
+    syncURLForProduct(p);
+    document
+      .querySelectorAll(".cat-btn")
+      .forEach((b) =>
+        b.classList.toggle("active", b.dataset.cat === currentCat),
+      );
+  }
   render();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
