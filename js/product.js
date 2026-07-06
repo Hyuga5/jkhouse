@@ -3370,6 +3370,85 @@ if (!canonicalEl) {
 }
 const defaultCanonical = window.location.origin + BASE_PATH;
 
+let productJsonLdEl = document.getElementById("product-jsonld");
+if (!productJsonLdEl) {
+  productJsonLdEl = document.createElement("script");
+  productJsonLdEl.type = "application/ld+json";
+  productJsonLdEl.id = "product-jsonld";
+  document.head.appendChild(productJsonLdEl);
+}
+
+function buildProductJsonLd(p) {
+  const url =
+    window.location.origin +
+    BASE_PATH +
+    "/" +
+    getProductSectionSlug(p) +
+    "/" +
+    p.slug;
+  const seller = { "@type": "Organization", name: "JK House and Suppliers" };
+
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: p.name,
+    description: p.description || "",
+    sku: p.slug,
+    category: catLabels[p.category] || p.category,
+    url: url,
+    brand: seller,
+  };
+
+  if (p.img) {
+    data.image =
+      window.location.origin + (p.img.startsWith("/") ? p.img : "/" + p.img);
+  }
+
+  if (p.variants && p.variants.length > 1) {
+    data.additionalProperty = p.variants.map((v) => ({
+      "@type": "PropertyValue",
+      name: "Size / Variant",
+      value: v.size,
+    }));
+  }
+
+  // 'offers' (or 'review'/'aggregateRating') is required for Google's
+  // Product rich-result eligibility. We build it straight from each
+  // product's real variant prices instead of hand-writing one, so it
+  // never drifts out of sync with what's actually on the page.
+  const pricedVariants = (p.variants || []).filter(
+    (v) => typeof v.price === "number",
+  );
+  if (pricedVariants.length) {
+    const prices = pricedVariants.map((v) => v.price);
+    const low = Math.min(...prices);
+    const high = Math.max(...prices);
+    if (low === high) {
+      data.offers = {
+        "@type": "Offer",
+        priceCurrency: "NPR",
+        price: String(low),
+        availability: "https://schema.org/InStock",
+        url: url,
+        seller: seller,
+      };
+    } else {
+      data.offers = {
+        "@type": "AggregateOffer",
+        priceCurrency: "NPR",
+        lowPrice: String(low),
+        highPrice: String(high),
+        offerCount: String(pricedVariants.length),
+        availability: "https://schema.org/InStock",
+        url: url,
+        seller: seller,
+      };
+    }
+  }
+
+  return data;
+}
+
 function getProductBySlug(slug) {
   return PRODUCTS.find((p) => p.slug === slug) || null;
 }
@@ -3434,6 +3513,7 @@ function setSEOForProduct(p) {
     "href",
     window.location.origin + BASE_PATH + "/" + getProductSectionSlug(p) + "/" + p.slug,
   );
+  productJsonLdEl.textContent = JSON.stringify(buildProductJsonLd(p));
 }
 function setSEOForCatalog() {
   document.title =
@@ -3449,6 +3529,11 @@ function setSEOForCatalog() {
         "/" +
         (categoryUrlSegment[currentCat] || currentCat.toLowerCase());
   canonicalEl.setAttribute("href", url);
+  // No single Product occupies a catalog/category listing page, so we
+  // don't emit a Product schema here — that was the root cause of the
+  // "offers/review/aggregateRating missing" error Search Console flagged
+  // for pages like /product.html#tanks (a whole category, not one SKU).
+  productJsonLdEl.textContent = "";
 }
 
 function syncURLForProduct(p) {
