@@ -3378,6 +3378,56 @@ if (!productJsonLdEl) {
   document.head.appendChild(productJsonLdEl);
 }
 
+let breadcrumbJsonLdEl = document.getElementById("breadcrumb-jsonld");
+if (!breadcrumbJsonLdEl) {
+  breadcrumbJsonLdEl = document.createElement("script");
+  breadcrumbJsonLdEl.type = "application/ld+json";
+  breadcrumbJsonLdEl.id = "breadcrumb-jsonld";
+  document.head.appendChild(breadcrumbJsonLdEl);
+}
+
+function buildBreadcrumbJsonLd(cat, product) {
+  const items = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: window.location.origin + "/",
+    },
+  ];
+  if (cat && cat !== "All") {
+    items.push({
+      "@type": "ListItem",
+      position: 2,
+      name: catLabels[cat] || cat,
+      item:
+        window.location.origin +
+        BASE_PATH +
+        "/" +
+        (categoryUrlSegment[cat] || cat.toLowerCase()),
+    });
+  }
+  if (product) {
+    items.push({
+      "@type": "ListItem",
+      position: items.length + 1,
+      name: product.name,
+      item:
+        window.location.origin +
+        BASE_PATH +
+        "/" +
+        getProductSectionSlug(product) +
+        "/" +
+        product.slug,
+    });
+  }
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items,
+  };
+}
+
 function buildProductJsonLd(p) {
   const url =
     window.location.origin +
@@ -3498,7 +3548,7 @@ const hashCategoryMap = {
   hdpe: "HDPE",
   tpzebra: "Garden",
   borewell: "BoringPipe",
-  tripal: "OtherItems",
+  tripal: "PlasticProducts",
   tanks: "Tank",
 };
 
@@ -3514,6 +3564,9 @@ function setSEOForProduct(p) {
     window.location.origin + BASE_PATH + "/" + getProductSectionSlug(p) + "/" + p.slug,
   );
   productJsonLdEl.textContent = JSON.stringify(buildProductJsonLd(p));
+  breadcrumbJsonLdEl.textContent = JSON.stringify(
+    buildBreadcrumbJsonLd(getCurrentCatForProduct(p), p),
+  );
 }
 function setSEOForCatalog() {
   document.title =
@@ -3534,6 +3587,8 @@ function setSEOForCatalog() {
   // "offers/review/aggregateRating missing" error Search Console flagged
   // for pages like /product.html#tanks (a whole category, not one SKU).
   productJsonLdEl.textContent = "";
+  breadcrumbJsonLdEl.textContent =
+    currentCat === "All" ? "" : JSON.stringify(buildBreadcrumbJsonLd(currentCat, null));
 }
 
 function syncURLForProduct(p) {
