@@ -1,49 +1,4 @@
-# Allow all crawlers
 User-agent: *
-Allow: /
-
-# Google
-User-agent: Googlebot
-Allow: /
-
-# Google AI (Gemini training)
-User-agent: Google-Extended
-Allow: /
-
-# OpenAI / ChatGPT
-User-agent: GPTBot
-Allow: /
-
-# OpenAI link preview
-User-agent: ChatGPT-User
-Allow: /
-
-# Anthropic / Claude
-User-agent: ClaudeBot
-Allow: /
-
-# Perplexity AI
-User-agent: PerplexityBot
-Allow: /
-
-# Grok / xAI
-User-agent: xAI-Bot
-Allow: /
-
-# Meta AI
-User-agent: meta-externalagent
-Allow: /
-
-# Amazon Alexa
-User-agent: Amazonbot
-Allow: /
-
-# Microsoft / Bing (used by Copilot)
-User-agent: Bingbot
-Allow: /
-
-# Apple
-User-agent: Applebot
 Allow: /
 
 Sitemap: https://jkhouse.com.np/sitemap.xml
