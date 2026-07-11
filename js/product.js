@@ -22,7 +22,7 @@ const PRODUCTS = [
       { size: '2" (50mm)', price: 1386 },
     ],
     notes: "Price per metre",
-    img: "images/cpvc/cpvcpipe.jpg",
+    img: "images/cpvc/pipe.jpg",
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ const PRODUCTS = [
       { size: '2"', price: 358 },
     ],
     notes: "",
-    img: "images/cpvc/cpvcsocket.jpg",
+    img: "images/cpvc/socket.jpg",
   },
   {
     id: 3,
